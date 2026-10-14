@@ -2,13 +2,35 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="author"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>입양 후기</title>
     <link> <!-- css 연결-->
 </head>
+
 <body>
-    <header>
-        <!--공통 헤더 들어갈 자리-->
+    <header class="site-header">
+        <div class="top-bar">
+            <a href="main.html" class="brand">
+                <img src="images/logo.png" alt="보호센터 로고">
+                <span>서울유기견보호센터</span>
+            </a>
+            <div class="top-bar-right">
+                <a href="#">공지사항</a>
+                <a href="adopt-apply.html" class="btn-chip">입양신청</a>
+                <span class="phone">📞 1588-0000</span>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="main.html">메인</a></li>
+                <li><a href="introduce.html" class="active">회사소개</a></li>
+                <li><a href="adopt-list.html">입양동물보기</a></li>
+                <li><a href="adopt-apply.html">입양신청</a></li>
+                <li><a href="adopt-review.html">입양후기</a></li>
+                <li><a href="donate.html">기부</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -19,72 +41,125 @@
         review-overlay(평소엔 숨기고 카드에 마우스 올리면 사진 위에 보이게),
         review-date/review-author(작은 글씨), review-text(후기 본문, 길면 ... 처리),
         apply-link(입양 신청 링크 문장)-->
-        <section class="intro">
-            <h1>입양 후기</h1>
+        <div class="intro">
+            <h1><img src="9_review.png" alt="Review Icon" width="36" height="36">OUR STORIES</h1>
             <p>새 가족을 만난 아이들의 이야기예요</p>
-        </section>
+        </div>
 
-        <section class="review-list">
-            <article class="review-card">
-                <img src="9_chihuahua.jpg" alt="흰 옷을 입고 이불 위에서 혀를 내밀고 누워 있는 치와와">
-                <div class="review-overlay">
-                    <p class="review-date">2026년 3월 입양</p>
-                    <h3>배 까고 자는 콩이 💛</h3>
-                    <p class="review-text">처음 왔을 땐 사람 손만 보면 덜덜 떨던 애였는데ㅠㅠ 지금은 보시다시피… 배 까고 메롱하면서 잠들어요ㅋㅋㅋ 옷 입히는 것도 이제 얌전히 기다려줘요. 콩떡아 우리 집 와줘서 고마워💛</p>
-                    <p class="review-author">콩이 언니</p>
-                </div>
-            </article>
-            <article class="review-card">
-                <img src="9_pome.jpg" alt="포메라니안">
-                <div class="review-overlay">
-                    <p class="review-date">2025년 11월 입양</p>
-                    <h3>솜털 같은 두부</h3>
-                    <p class="review-text">표정 보면 아시겠지만 성격이 보통이 아닙니다. 간식 늦게 주면 저렇게 내려다봐요. 그래도 퇴근하고 들어오면 제일 먼저 뛰어나오는 건 두부예요. 혼자 살던 집이 이제 좀 시끄러워졌네요ㅎㅎ</p>
-                    <p class="review-author">두부 집사</p>
-                </div>
-            </article>
-            <article class="review-card">
-                <img src="9_maltese.jpg" alt="말티즈">
-                <div class="review-overlay">
-                    <p class="review-date">2026년 5월 입양</p>
-                    <h3>우리 집 솜뭉치 🐾</h3>
-                    <p class="review-text">아이들이 이름을 지어줬어요~ 진짜 솜뭉치 같아서요^^ 처음엔 밥도 잘 안 먹어서 걱정 많이 했는데 지금은 온 집안을 뛰어다닙니다. 너무너무 예뻐요♡</p>
-                    <p class="review-author">뭉치네 엄마</p>
-                </div>
-            </article>
-            <article class="review-card">
-                <img src="9_poodle.jpg" alt="푸들">
-                <div class="review-overlay">
-                    <p class="review-date">2025년 8월 입양</p>
-                    <h3>폭탄머리 밤이</h3>
-                    <p class="review-text">미용 직후 사진 아닙니다... 이게 밤이 기본 상태예요ㅋㅋㅋ 머리털이 바람만 불어도 저렇게 돼요. 엄청 똑똑해서 앉아, 손, 기다려 다 일주일 만에 배웠어요. 요즘은 간식 서랍 여는 소리까지 구분함;;</p>
-                    <p class="review-author">밤이 형아</p>
-                </div>
-            </article>
-            <article class="review-card">
-                <img src="9_retriever.jpg" alt="리트리버">
-                <div class="review-overlay">
-                    <p class="review-date">2025년 5월 입양</p>
-                    <h3>쿠션이 제일 좋은 아기 버터</h3>
-                    <p class="review-text">아직 아기라 하루 대부분을 저렇게 쿠션에 턱 괴고 자면서 보내요. 이렇게 작은데 나중에 엄청 커진다니 실감이 안 나네요. 남편이 제일 반대했었는데 지금은 남편이 제일 끼고 삽니다😂</p>
-                    <p class="review-author">버터 엄마</p>
-                </div>
-            </article>
-            <article class="review-card">
-                <img src="9_shihtzu.jpg" alt="시츄">
-                <div class="review-overlay">
-                    <p class="review-date">2026년 6월 입양</p>
-                    <h3>웃음이 늘어난 우리 집</h3>
-                    <p class="review-text">늘 웃는 얼굴이라 방실이라고 지었습니다. 나이가 좀 있어서 입양을 고민했는데, 데려오길 정말 잘했어요. 저희 부부 둘만 살던 조용한 집에 웃음이 늘었어요. 보호소 선생님들께도 감사드립니다.</p>
-                    <p class="review-author">방실이네</p>
-                </div>
-            </article>
-        </section>
-        <p class="apply-link">우리도 가족이 되어볼까요? <a href="adopt-apply.html">입양 신청하기</a></p>
+        <!--3단 레이아웃 컨테이너-->
+        <div class="content-layout">
+            <!--왼쪽 사이드바 영역-->
+            <div class="sidebar-left"></div>
+
+            <!--중앙 메인 콘텐츠 영역-->
+            <div class="main-content">
+                <section class="review-list">
+                    <article class="review-card">
+                        <img src="9_chihuahua.jpg" alt="흰 옷을 입고 이불 위에서 혀를 내밀고 누워 있는 치와와">
+                        <div class="review-overlay">
+                            <p class="review-date">2026년 3월 입양</p>
+                            <h3>배 까고 자는 콩이 💛</h3>
+                            <p class="review-text">처음 왔을 땐 사람 손만 보면 덜덜 떨던 애였는데ㅠㅠ 지금은 보시다시피… 배 까고 메롱하면서 잠들어요ㅋㅋㅋ 옷 입히는 것도 이제 얌전히 기다려줘요. 콩떡아 우리 집 와줘서 고마워💛</p>
+                            <p class="review-author">콩이 언니</p>
+                        </div>
+                    </article>
+                    <article class="review-card">
+                        <img src="9_pome.jpg" alt="포메라니안">
+                        <div class="review-overlay">
+                            <p class="review-date">2025년 11월 입양</p>
+                            <h3>솜털 같은 두부</h3>
+                            <p class="review-text">표정 보면 아시겠지만 성격이 보통이 아닙니다. 간식 늦게 주면 저렇게 내려다봐요. 그래도 퇴근하고 들어오면 제일 먼저 뛰어나오는 건 두부예요. 혼자 살던 집이 이제 좀 시끄러워졌네요ㅎㅎ</p>
+                            <p class="review-author">두부 집사</p>
+                        </div>
+                    </article>
+                    <article class="review-card">
+                        <img src="9_maltese.jpg" alt="말티즈">
+                        <div class="review-overlay">
+                            <p class="review-date">2026년 5월 입양</p>
+                            <h3>우리 집 솜뭉치 🐾</h3>
+                            <p class="review-text">아이들이 이름을 지어줬어요~ 진짜 솜뭉치 같아서요^^ 처음엔 밥도 잘 안 먹어서 걱정 많이 했는데 지금은 온 집안을 뛰어다닙니다. 너무너무 예뻐요♡</p>
+                            <p class="review-author">뭉치네 엄마</p>
+                        </div>
+                    </article>
+                    <article class="review-card">
+                        <img src="9_poodle.jpg" alt="푸들">
+                        <div class="review-overlay">
+                            <p class="review-date">2025년 8월 입양</p>
+                            <h3>폭탄머리 밤이</h3>
+                            <p class="review-text">미용 직후 사진 아닙니다... 이게 밤이 기본 상태예요ㅋㅋㅋ 머리털이 바람만 불어도 저렇게 돼요. 엄청 똑똑해서 앉아, 손, 기다려 다 일주일 만에 배웠어요. 요즘은 간식 서랍 여는 소리까지 구분함;;</p>
+                            <p class="review-author">밤이 형아</p>
+                        </div>
+                    </article>
+                    <article class="review-card">
+                        <img src="9_retriever.jpg" alt="리트리버">
+                        <div class="review-overlay">
+                            <p class="review-date">2025년 5월 입양</p>
+                            <h3>쿠션이 제일 좋은 아기 버터</h3>
+                            <p class="review-text">아직 아기라 하루 대부분을 저렇게 쿠션에 턱 괴고 자면서 보내요. 이렇게 작은데 나중에 엄청 커진다니 실감이 안 나네요. 남편이 제일 반대했었는데 지금은 남편이 제일 끼고 삽니다😂</p>
+                            <p class="review-author">버터 엄마</p>
+                        </div>
+                    </article>
+                    <article class="review-card">
+                        <img src="9_shihtzu.jpg" alt="시츄">
+                        <div class="review-overlay">
+                            <p class="review-date">2026년 6월 입양</p>
+                            <h3>웃음이 늘어난 우리 집</h3>
+                            <p class="review-text">늘 웃는 얼굴이라 방실이라고 지었습니다. 나이가 좀 있어서 입양을 고민했는데, 데려오길 정말 잘했어요. 저희 부부 둘만 살던 조용한 집에 웃음이 늘었어요. 보호소 선생님들께도 감사드립니다.</p>
+                            <p class="review-author">방실이네</p>
+                        </div>
+                    </article>
+                </section>
+
+                <nav class="pagination">
+                    <a href="#">&lt; 이전</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">다음 &gt;</a>
+                </nav>
+
+                <form method="get" action="#">
+                    <fieldset>
+                        <legend>후기 작성</legend>
+                        <div class="form-group">
+                            <label for="nickname">닉네임</label>
+                            <input type="text"  id="nickname" name="nickname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-title">제목</label>
+                            <input type="text" id="review-title" name="review-title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adopt-month">입양 날짜</label>
+                            <input type="month" id="adopt-month" name="adopt-month" max="2026-10"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adopt-review">입양 후기 작성</label>
+                            <textarea id="adopt-review" name="adopt-review" rows="3"
+                            placeholder="여러분의 입양 후기를 작성해주세요!" required></textarea>
+                        </div>
+                    </fieldset>
+                </form>
+                <p class="apply-link">우리도 가족이 되어볼까요? <a href="adopt-apply.html">입양 신청하기</a></p>
+            </div>
+
+            <!--오른쪽 대칭용 여백 영역-->
+            <div class="spacer"></div>
+        </div>
+        
     </main>
 
-    <footer>
-        <!--공통 푸터 들어갈 자리-->
+    <footer class="footer">
+        <p class="footer-title">아이조아 통합요양센터</p>
+        <p class="footer-sub">아이조아 요양보호소 서울점</p>
+        <p>사업자등록번호 : 537-72-00436 | 대표 : 신정호</p>
+        <p>서울특별시 용산구 녹사평대로32길 28, 3층(이태원동) | 위탁관리업 No : 제3020000-048-2022-0005호</p>
+        <p>본사문의 : 070. 7719. 0028</p>
+        <p class="copyright">Copyright © 2025 아이조아 All rights reserved.</p>
     </footer>
 </body>
 </html>
