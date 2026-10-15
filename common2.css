@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Gowun+Dodum&display=swap');
+
+/* =========================================================
+1. 디자인 시스템 변수
+   ========================================================= */
+:root {
+--mint-dark: #3e9e82;
+--mint: #4CAF93;
+--mint-light: #A8D5BA;
+--mint-pale: #EAF6F0;
+--beige: #F6F1E7;
+--beige-dark: #E7DCC5;
+--danger: #E08585;
+--danger-dark: #C96B6B;
+--text-dark: #2E3B36;
+--text-sub: #6B7A74;
+--white: #FFFFFF;
+
+--shadow: 0 4px 14px rgba(46, 59, 54, 0.08);
+--shadow-hover: 0 8px 22px rgba(46, 59, 54, 0.14);
+--radius-sm: 8px;
+--radius-md: 16px;
+--radius-pill: 999px;
+--max-width: 1140px;
+--gap: 24px;
+}
+
+/* =========================================================
+2. 리셋 & 기본 타이포그래피
+   ========================================================= */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--text-dark);
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px 48px;
+}
+
+h1, h2, h3 {
+    font-family: "Gowun Dodum", sans-serif;
+    line-height: 1.4;
+    margin: 0 0 12px;
+}
+
+h1 { font-size: 2rem; }
+
+h2 {
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    background: var(--mint);
+    border-radius: var(--radius-pill);
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: var(--mint-dark);
+}
+
+p { margin: 0 0 12px; }
+
+a {
+    color: var(--mint-dark);
+    text-decoration: none;
+    transition: color .25s;
+}
+a:hover {
+    color: var(--mint);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--beige-dark);
+    margin: 40px 0;
+}
+
+mark {
+    background: none;
+    color: var(--mint-dark);
+    font-weight: 700;
+}
+
+em {
+    color: var(--mint-dark);
+    font-style: normal;
+    font-weight: 500;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: .88rem;
+    color: var(--text-sub);
+}
+
+/* =========================================================
+    3. 헤더 & 대메뉴
+   ========================================================= */
+.top-bar {
+    max-width: 100%;
+    margin: 0;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+}
+.brand:hover {
+    color: var(--mint-dark);
+    text-decoration: none;
+}
+.brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: .88rem;
+    color: var(--text-sub);
+}
+.top-bar-right a { color: var(--text-sub); }
+.top-bar-right a:hover { color: var(--mint-dark); }
+.phone { font-weight: 700; color: var(--text-dark); }
+
+.btn-chip {
+    background: var(--mint-pale);
+    color: var(--mint-dark) !important;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: var(--radius-pill);
+    transition: background .25s, color .25s;
+}
+.btn-chip:hover {
+    background: var(--mint);
+    color: var(--white) !important;
+    text-decoration: none;
+}
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-top: 1px solid var(--beige-dark);
+    border-bottom: 1px solid var(--beige-dark);
+}
+
+.site-nav ul {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.site-nav a {
+    display: block;
+    padding: 16px 18px;
+    font-weight: 500;
+    color: var(--text-dark);
+    border-bottom: 3px solid transparent;
+    transition: color .25s, border-color .25s;
+}
+
+.site-nav a:hover {
+    color: var(--mint-dark);
+    border-bottom-color: var(--mint-light);
+    text-decoration: none;
+}
+
+.site-nav a.active {
+    color: var(--mint-dark);
+    border-bottom-color: var(--mint);
+    font-weight: 700;
+}
+
+/* =========================================================
+    4. 공통 레이아웃 (3단 배치: 사이드바 | 메인 | 스페이서)
+   ========================================================= */
+main {
+    width: 100%;
+    max-width: 100%;       
+    padding: 0 40px 48px;  
+}
+.intro {
+    text-align: center;
+    margin: 24px 0 36px;
+    padding: 40px 24px;
+    background: var(--mint-pale);
+    border-radius: var(--radius-md);
+}
+
+.intro h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.intro p {
+    margin: 0;
+    color: var(--text-sub);
+}
+
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.sidebar-left {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 90px;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding : 28px;
+}
+
+.spacer {
+    flex: 0 0 220px;
+    width: 220px;
+}
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item a {
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: .92rem;
+    font-weight: 500;
+    background: var(--white);
+    color: var(--mint-dark);
+    border: 1px solid var(--mint-light);
+    border-radius: var(--radius-pill);
+    transition: background .3s, color .3s, transform .2s;
+}
+
+.menu-item a:hover {
+    background: var(--mint-pale);
+    border-color: var(--mint);
+    transform: translateX(4px);
+    text-decoration: none;
+}
+
+.menu-item.active a {
+    background: var(--mint);
+    color: var(--white);
+    border-color: var(--mint);
+}
+
+[id] {
+    scroll-margin-top: 90px;
+}
+
+/* =========================================================
+    5. 공통 컴포넌트 (버튼, 폼, 테이블, 푸터)
+   ========================================================= */
+.btn, button, input[type="submit"], input[type="reset"] {
+    display: inline-block;
+    padding: 12px 28px;
+    cursor: pointer;
+    font: 700 .95rem "Noto Sans KR", sans-serif;
+    color: var(--white);
+    background: var(--mint-dark);
+    border: none;
+    border-radius: var(--radius-pill);
+    transition: background .25s, transform .2s, box-shadow .25s;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover {
+    background: var(--mint);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    text-decoration: none;
+    color: var(--white);
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 24px;
+    padding: 20px 24px;
+    border: 1px solid var(--beige-dark);
+    border-radius: var(--radius-md);
+    background: var(--white);
+}
+
+legend {
+    padding: 0 10px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 700;
+    color: var(--mint-dark);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.form-group > label:first-child {
+    flex: 0 0 150px;
+    font-weight: 500;
+}
+
+.form-group > input,
+.form-group > select,
+.form-group > textarea {
+    flex: 1;
+    min-width: 0;
+}
+
+input[type="text"], input[type="tel"], input[type="email"],
+input[type="number"], input[type="date"], input[type="month"],
+select, textarea {
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text-dark);
+    background: var(--white);
+    border: 1px solid var(--beige-dark);
+    border-radius: var(--radius-sm);
+    transition: border-color .25s, box-shadow .25s;
+}
+
+textarea { resize: vertical; }
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--mint);
+    box-shadow: 0 0 0 3px var(--mint-pale);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+}
+
+caption {
+    margin-bottom: 10px;
+    font: 700 1rem "Gowun Dodum", sans-serif;
+    color: var(--mint-dark);
+}
+
+th {
+    background: var(--mint);
+    color: var(--white);
+    font-weight: 500;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--beige-dark);
+    text-align: center;
+}
+
+tbody tr:nth-child(even) td { background: var(--beige); }
+
+.footer {
+    margin-top: 40px;
+    padding: 28px 24px 40px;
+    text-align: center;
+    font-size: .85rem;
+    color: var(--text-sub);
+    background: var(--mint-pale);
+    border-top: 1px solid var(--beige-dark);
+}
+
+.footer p { margin: 4px 0; }
+.footer-title {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
