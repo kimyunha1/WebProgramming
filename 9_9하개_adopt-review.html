@@ -24,10 +24,10 @@
         <nav class="site-nav">
             <ul>
                 <li><a href="9_9하개_main.html">메인</a></li>
-                <li><a href="9_9하개_introduce.html" class="active">회사 소개</a></li>
+                <li><a href="9_9하개_introduce.html">회사 소개</a></li>
                 <li><a href="9_9하개_adopt-list.html">보호 중인 동물</a></li>
                 <li><a href="9_9하개_adopt-apply.html">입양 신청</a></li>
-                <li><a href="9_9하개_adopt-review.html">입양 후기</a></li>
+                <li><a href="9_9하개_adopt-review.html" class="active">입양 후기</a></li>
                 <li><a href="9_9하개_donate.html">기부</a></li>
             </ul>
         </nav>
@@ -60,26 +60,26 @@
                         <div class="review-overlay">
                             <p class="review-date">2026년 3월 입양</p>
                             <h3>배 까고 자는 콩이 💛</h3>
-                            <p class="review-text">처음 왔을 땐 사람 손만 보면 덜덜 떨던 애였는데ㅠㅠ 지금은 보시다시피… 배 까고 메롱하면서 잠들어요ㅋㅋㅋ 옷 입히는 것도 이제 얌전히 기다려줘요. 콩떡아 우리 집 와줘서 고마워💛</p>
+                            <p class="review-text">처음 왔을 땐 사람 손만 보면 덜덜 떨던 애였는데ㅠㅠ 지금은 보시다시피… 배 까고 메롱하면서 잠들어요ㅋㅋㅋ 옷 입히는 것도 이제 얌전히 기다려줘요. 콩이야 우리 집 와줘서 고마워💛</p>
                             <p class="review-author">콩이 언니</p>
                         </div>
                     </article>
                     <article class="review-card" id="review-pome">
                         <img src="9_pome.jpg" alt="포메라니안">
                         <div class="review-overlay">
-                            <p class="review-date">2025년 11월 입양</p>
-                            <h3>솜털 같은 두부</h3>
-                            <p class="review-text">표정 보면 아시겠지만 성격이 보통이 아닙니다. 간식 늦게 주면 저렇게 내려다봐요. 그래도 퇴근하고 들어오면 제일 먼저 뛰어나오는 건 두부예요. 혼자 살던 집이 이제 좀 시끄러워졌네요ㅎㅎ</p>
-                            <p class="review-author">두부 집사</p>
-                        </div>
-                    </article>
-                    <article class="review-card">
-                        <img src="9_maltese.jpg" alt="말티즈">
-                        <div class="review-overlay">
                             <p class="review-date">2026년 5월 입양</p>
                             <h3>우리 집 솜뭉치 🐾</h3>
                             <p class="review-text">아이들이 이름을 지어줬어요~ 진짜 솜뭉치 같아서요^^ 처음엔 밥도 잘 안 먹어서 걱정 많이 했는데 지금은 온 집안을 뛰어다닙니다. 너무너무 예뻐요♡</p>
                             <p class="review-author">뭉치네 엄마</p>
+                        </div>
+                    </article>
+                    <article class="review-card" >
+                        <img src="9_maltese.jpg" alt="말티즈">
+                        <div class="review-overlay">
+                            <p class="review-date">2025년 11월 입양</p>
+                            <h3>솜털 같은 두부</h3>
+                            <p class="review-text">표정 보면 아시겠지만 성격이 보통이 아닙니다. 간식 늦게 주면 저렇게 내려다봐요. 그래도 퇴근하고 들어오면 제일 먼저 뛰어나오는 건 두부예요. 혼자 살던 집이 이제 좀 시끄러워졌네요ㅎㅎ</p>
+                            <p class="review-author">두부 집사</p>
                         </div>
                     </article>
                     <article class="review-card" id="review-poodle">
@@ -136,12 +136,16 @@
 
                         <div class="form-group">
                             <label for="adopt-month">입양 날짜</label>
-                            <input type="month" id="adopt-month" name="adopt-month" max="2026-10"required>
+                            <input type="month" id="adopt-month" name="adopt-month" max="2026-10" required>
                         </div>
                         <div class="form-group">
                             <label for="adopt-review">입양 후기 작성</label>
                             <textarea id="adopt-review" name="adopt-review" rows="3"
                             placeholder="여러분의 입양 후기를 작성해주세요!" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-photo">사진 첨부</label>
+                            <input type="file" id="review-photo" name="review-photo" required>
                         </div>
                     </fieldset>
                 <input type="submit" value="등록">
