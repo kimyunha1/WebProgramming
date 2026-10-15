@@ -1,0 +1,36 @@
+.please-donate, .donate-table {
+    text-align: center;   
+}
+
+.main-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+}
+
+.cta-box { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 32px 24px; 
+    background: var(--beige); 
+    border-radius: var(--radius-md); 
+}
+.cta-box .btn, 
+.cta-box button { 
+    padding: 16px 40px; 
+    font-size: 1.1rem; 
+}
+
+.donate-form .option-group + .option-group { margin-top: 4px; }
+.donate-form input[type="number"] { width: 140px; flex: none; }
+
+.agree-row { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 16px; 
+    margin-top: 8px; 
+}
+.agree-row .btn-row { margin-top: 0; }
