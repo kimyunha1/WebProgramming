@@ -1,10 +1,9 @@
-/* dog-detail.css */
+/* dog-detail.css - 강아지 상세 정보 전용 스타일 */
 
 .intro {
   background-color: var(--beige);
 }
 
-/* 1. 상단 2단 배치 (사진 400px + 오른쪽 정보 영역) */
 .dog-detail-layout {
   display: flex;
   gap: 32px;
@@ -17,7 +16,7 @@
 
 .dog-photos img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* 사진을 1:1 정방형으로 깔끔하게 고정 (필요시 4 / 3 변경 가능) */
+  aspect-ratio: 3 / 4; 
   object-fit: cover;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow);
@@ -34,7 +33,7 @@
 }
 
 .dog-detail-content h2::after {
-  display: none; /* 상세 정보 제목 밑줄은 생략하여 깔끔하게 처리 */
+  display: none;
 }
 
 /* 2. 상태 알림 뱃지 (보호 중) */
