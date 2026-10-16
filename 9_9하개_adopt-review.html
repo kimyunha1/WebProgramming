@@ -2,33 +2,33 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="author"
+    <meta name="author" content="김사랑, 김윤하, 조민체, 최석인">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>입양 후기</title>
-    <link> <!-- css 연결-->
+    <title>입양 후기 | 9하개</title>
+    <link rel="stylesheet" href="common2.css">
 </head>
 
 <body>
     <header class="site-header">
         <div class="top-bar">
-            <a href="main.html" class="brand">
-                <img src="images/logo.png" alt="보호센터 로고">
-                <span>서울유기견보호센터</span>
+            <a href="9_9하개_main.html" class="brand">
+                <img src="9_logo.png" alt="9하개 로고">
+                <span>9하개</span>
             </a>
             <div class="top-bar-right">
                 <a href="#">공지사항</a>
-                <a href="adopt-apply.html" class="btn-chip">입양신청</a>
+                <a href="9_9하개_adopt-apply.html" class="btn-chip">입양신청</a>
                 <span class="phone">📞 1588-0000</span>
             </div>
         </div>
         <nav class="site-nav">
             <ul>
-                <li><a href="main.html">메인</a></li>
-                <li><a href="introduce.html" class="active">회사소개</a></li>
-                <li><a href="adopt-list.html">입양동물보기</a></li>
-                <li><a href="adopt-apply.html">입양신청</a></li>
-                <li><a href="adopt-review.html">입양후기</a></li>
-                <li><a href="donate.html">기부</a></li>
+                <li><a href="9_9하개_main.html">메인</a></li>
+                <li><a href="9_9하개_introduce.html">회사 소개</a></li>
+                <li><a href="9_9하개_adopt-list.html">보호 중인 동물</a></li>
+                <li><a href="9_9하개_adopt-apply.html">입양 신청</a></li>
+                <li><a href="9_9하개_adopt-review.html" class="active">입양 후기</a></li>
+                <li><a href="9_9하개_donate.html">기부</a></li>
             </ul>
         </nav>
     </header>
@@ -42,8 +42,9 @@
         review-date/review-author(작은 글씨), review-text(후기 본문, 길면 ... 처리),
         apply-link(입양 신청 링크 문장)-->
         <div class="intro">
-            <h1><img src="9_review.png" alt="Review Icon" width="36" height="36">OUR STORIES</h1>
-            <p>새 가족을 만난 아이들의 이야기예요</p>
+            <h1><img src="9_review.png" alt="Review Icon">입양 후기</h1>
+            <p><strong>새 가족</strong>을 만난 아이들의 이야기예요.<br>
+            여러분의 행복한 이야기도 함께 나눠주세요.</p>
         </div>
 
         <!--3단 레이아웃 컨테이너-->
@@ -54,26 +55,17 @@
             <!--중앙 메인 콘텐츠 영역-->
             <div class="main-content">
                 <section class="review-list">
-                    <article class="review-card">
+                    <article class="review-card" id="review-chihuahua">
                         <img src="9_chihuahua.jpg" alt="흰 옷을 입고 이불 위에서 혀를 내밀고 누워 있는 치와와">
                         <div class="review-overlay">
                             <p class="review-date">2026년 3월 입양</p>
                             <h3>배 까고 자는 콩이 💛</h3>
-                            <p class="review-text">처음 왔을 땐 사람 손만 보면 덜덜 떨던 애였는데ㅠㅠ 지금은 보시다시피… 배 까고 메롱하면서 잠들어요ㅋㅋㅋ 옷 입히는 것도 이제 얌전히 기다려줘요. 콩떡아 우리 집 와줘서 고마워💛</p>
+                            <p class="review-text">처음 왔을 땐 사람 손만 보면 덜덜 떨던 애였는데ㅠㅠ 지금은 보시다시피… 배 까고 메롱하면서 잠들어요ㅋㅋㅋ 옷 입히는 것도 이제 얌전히 기다려줘요. 콩이야 우리 집 와줘서 고마워💛</p>
                             <p class="review-author">콩이 언니</p>
                         </div>
                     </article>
-                    <article class="review-card">
+                    <article class="review-card" id="review-pome">
                         <img src="9_pome.jpg" alt="포메라니안">
-                        <div class="review-overlay">
-                            <p class="review-date">2025년 11월 입양</p>
-                            <h3>솜털 같은 두부</h3>
-                            <p class="review-text">표정 보면 아시겠지만 성격이 보통이 아닙니다. 간식 늦게 주면 저렇게 내려다봐요. 그래도 퇴근하고 들어오면 제일 먼저 뛰어나오는 건 두부예요. 혼자 살던 집이 이제 좀 시끄러워졌네요ㅎㅎ</p>
-                            <p class="review-author">두부 집사</p>
-                        </div>
-                    </article>
-                    <article class="review-card">
-                        <img src="9_maltese.jpg" alt="말티즈">
                         <div class="review-overlay">
                             <p class="review-date">2026년 5월 입양</p>
                             <h3>우리 집 솜뭉치 🐾</h3>
@@ -81,7 +73,16 @@
                             <p class="review-author">뭉치네 엄마</p>
                         </div>
                     </article>
-                    <article class="review-card">
+                    <article class="review-card" >
+                        <img src="9_maltese.jpg" alt="말티즈">
+                        <div class="review-overlay">
+                            <p class="review-date">2025년 11월 입양</p>
+                            <h3>솜털 같은 두부</h3>
+                            <p class="review-text">표정 보면 아시겠지만 성격이 보통이 아닙니다. 간식 늦게 주면 저렇게 내려다봐요. 그래도 퇴근하고 들어오면 제일 먼저 뛰어나오는 건 두부예요. 혼자 살던 집이 이제 좀 시끄러워졌네요ㅎㅎ</p>
+                            <p class="review-author">두부 집사</p>
+                        </div>
+                    </article>
+                    <article class="review-card" id="review-poodle">
                         <img src="9_poodle.jpg" alt="푸들">
                         <div class="review-overlay">
                             <p class="review-date">2025년 8월 입양</p>
@@ -135,16 +136,21 @@
 
                         <div class="form-group">
                             <label for="adopt-month">입양 날짜</label>
-                            <input type="month" id="adopt-month" name="adopt-month" max="2026-10"required>
+                            <input type="month" id="adopt-month" name="adopt-month" max="2026-10" required>
                         </div>
                         <div class="form-group">
                             <label for="adopt-review">입양 후기 작성</label>
                             <textarea id="adopt-review" name="adopt-review" rows="3"
                             placeholder="여러분의 입양 후기를 작성해주세요!" required></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="review-photo">사진 첨부</label>
+                            <input type="file" id="review-photo" name="review-photo" required>
+                        </div>
                     </fieldset>
+                <input type="submit" value="등록">
                 </form>
-                <p class="apply-link">우리도 가족이 되어볼까요? <a href="adopt-apply.html">입양 신청하기</a></p>
+                <p class="apply-link">우리도 가족이 되어볼까요? <a href="9_9하개_adopt-apply.html">입양 신청하기</a></p>
             </div>
 
             <!--오른쪽 대칭용 여백 영역-->
@@ -154,12 +160,12 @@
     </main>
 
     <footer class="footer">
-        <p class="footer-title">아이조아 통합요양센터</p>
-        <p class="footer-sub">아이조아 요양보호소 서울점</p>
-        <p>사업자등록번호 : 537-72-00436 | 대표 : 신정호</p>
-        <p>서울특별시 용산구 녹사평대로32길 28, 3층(이태원동) | 위탁관리업 No : 제3020000-048-2022-0005호</p>
-        <p>본사문의 : 070. 7719. 0028</p>
-        <p class="copyright">Copyright © 2025 아이조아 All rights reserved.</p>
+        <p class="footer-title">9하개</p>
+        <p class="footer-sub">9하개 서울점</p>
+        <p>사업자등록번호 : 537-72-00436 | 대표 : 김윤하</p>
+        <p>서울특별시 용산구 청파로 47길 | 위탁관리업 No : 제3020000-048-2022-0005호</p>
+        <p>본사문의 : 1588-0000</p>
+        <p class="copyright">Copyright © 2026 9하개 All rights reserved.</p>
     </footer>
 </body>
 </html>

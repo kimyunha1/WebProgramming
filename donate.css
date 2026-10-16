@@ -1,0 +1,50 @@
+.please-donate, .donate-table {
+    text-align: center;   
+}
+
+.main-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+}
+
+.donate-form h2 {
+    text-align: center;
+}
+
+.donate-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 24px;
+    /* background: var(--beige); */
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+}
+
+.donate-box button {
+    padding: 14px 36px;
+    font-size: 1.1rem;
+}
+/* 1. 옵션 감싸는 div: 버튼끼리 가로로 간격(gap)을 두고 배치 */
+.option-group {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* 라디오 버튼 항목 사이 간격 */
+  margin-bottom: 16px; /* 다음 질문과의 간격 */
+}
+
+/* 2. 숫자 입력창 크기 고정 */
+.input-num {
+  width: 140px;
+}
+
+.agree-row { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 16px; 
+    margin-top: 8px; 
+}
+.agree-row .btn-row { margin-top: 0; }
