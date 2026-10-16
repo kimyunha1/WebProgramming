@@ -31,14 +31,8 @@
 * { box-sizing: border-box; }
 /* html { scroll-behavior: smooth; } */
 
-body {
+body { 
     margin: 0;
-    /* background: var(--white); */
-        /* background-image: url(dog.jpg);
-        background-repeat: repeat;
-        background-size: 41%;
-        background-position: center; */
-    /* background-attachment: fixed; */
     color: var(--text-dark);
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
@@ -56,7 +50,7 @@ main {
     padding: 0 24px 48px;
 }
 /*글씨*/
-h1, h2, h3 { /*공통설정Gowun Dodum*/ 
+h1, h2, h3 { /*공통설정 Gowun Dodum*/ 
     font-family: "Noto Sans KR", sans-serif;
     /* line-height: 1.4; */
     margin: 0 0 12px;
@@ -70,7 +64,7 @@ h1, h2, h3 { /*공통설정Gowun Dodum*/
         position: relative;
         padding-bottom: 20px;
         line-height: 1.4;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
     }
 
     h2::after {
@@ -101,29 +95,29 @@ a {
     text-decoration: none;
     transition: color .25s;
 }
-/* a:hover {
-    color: var(--mint);
-    text-decoration: underline;
-} */
+                /* a:hover { a태그 위에 마우스 올리면 밑줄 기본
+                    color: var(--mint);
+                    text-decoration: underline;
+                } */
 
 img {
     max-width: 100%;
     border-radius: var(--radius-md);
 }
 
-hr { /*콘텐츠와 콘텐츠 사이를 구분하는 가로선을 만드는 HTML 태그*/
+hr { /* 콘텐츠와 콘텐츠 사이를 구분하는 베이지 가로선 */
     border: none;
     border-top: 1px solid var(--beige-dark);
     margin: 40px 0;
 }
-/*글꼴 mark,em*/
+/*글꼴 mark,em,strong*/
 mark {
     background: none;
     color: var(--mint-dark);
     font-weight: 700;
 }
 
-em {
+em, strong {
     color: var(--mint-dark);
     font-style: normal;
     font-weight: 500;
@@ -150,6 +144,7 @@ figcaption {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 70px;
 }
 
 .brand {
@@ -157,16 +152,17 @@ figcaption {
     align-items: center;
     gap: 10px;
     font-family: "Gowun Dodum", sans-serif;
+    font-weight: 900;
     font-size: 1.3rem;
-    color: var(--text-dark);
+    color: goldenrod;
 }
 .brand:hover {
     color: var(--mint-dark);
     text-decoration: none;
 }
 .brand img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -192,43 +188,43 @@ figcaption {
 .btn-chip:hover {
     background: var(--mint);
     color: var(--white) !important;
-    text-decoration: none; /*링크에 밑줄이 생기지 않도록 설정*/
+    /* text-decoration: none; */
+    /*링크에 밑줄이 생기지 않도록 설정*/
 }
 
 .site-nav {
     position: sticky;
     top: 0;
     z-index: 100; /*다른 요소와 겹칠 때 앞쪽에 표시되도록 높은 쌓임 순서 지정*/
-    background: var(--white);
+    /* background: var(--white); */
     border-top: 1px solid var(--beige-dark);
     border-bottom: 1px solid var(--beige-dark);
 }
-
-.site-nav ul { /*메뉴 항목들을 가로로 정렬. flex-direction을 따로 작성하지 않았으므로 기본값인 row가 적용*/
+.site-nav ul { /* 메뉴 항목들을 가로로 정렬 */
+    display: flex; /*메뉴 항목을 가로 방향으로 배치*/
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 24px;
-    list-style: none; /*목록 앞에 붙는 기본 글머리 기호 제거*/
-    display: flex; /*메뉴 항목을 가로 방향으로 배치*/
-    justify-content: center; /*메뉴 항목들을 가로 방향 가운데 정렬*/
     gap: 15px;
+    list-style: none; /*목록 앞에 붙는 기본 글머리 기호 제거*/
+    justify-content: center; /*메뉴 항목들을 가로 방향 가운데 정렬*/
 }
-
-.site-nav a {
-    display: block; /*링크가 블록 요소처럼 공간을 차지하도록 설정*/
-    padding: 16px 18px;
-    font-weight: 500;
-    color: var(--text-dark);
-    border-bottom: 3px solid transparent; /*아래쪽에 투명한 3px 테두리를 미리 확보*/
-    transition: color .25s, border-color .25s;
-}
-
+                .site-nav a { /*이해*/
+                    display: block; 
+                    /*링크가 블록 요소처럼 공간을 차지하도록 설정*/
+                    padding: 16px 18px;
+                    font-weight: 500;
+                    color: var(--text-dark);
+                    /* border-bottom: 3px solid transparent;  */
+                    /*아래쪽에 투명한 3px 테두리를 미리 확보. 이게 왜 필요??*/
+                    /* transition: color .25s, border-color .25s; */
+                    /*이게 왜 필요??*/
+                }
 .site-nav a:hover {
     color: var(--mint-dark);
     border-bottom-color: var(--mint-light);
     /* text-decoration: none; */
 }
-
 .site-nav a.active {
     color: var(--mint-dark);
     border-bottom-color: var(--mint);
@@ -249,16 +245,24 @@ main {
     padding: 40px 24px;
     background: var(--mint-pale);
     border-radius: var(--radius-md);
-    /* background-image: url(androidparty.png); */
-}
+    width: 100%;
+    min-height: 200px;
 
-.intro h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro img {
+    width: 35px;
+    height: 35px;
+}
+.intro img, .intro h1 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-
 .intro p {
     margin: 0;
     color: var(--text-sub);
@@ -266,26 +270,30 @@ main {
 
 .content-layout {
     display: flex;
-    align-items: flex-start; /*얘가 있어야 nav가 따라옴*/
+    align-items: flex-start;
     gap: 24px;
 }
-
 .sidebar-left {
     flex: 0 0 220px;
     position: sticky;
-    top: 90px; /*화면 위쪽에서 90px 떨어진 위치에 붙어 있어.*/
+    top: 90px;
 }
-
 .main-content {
     background: var(--white);
     flex: 1;
-    min-width: 0;
+    /* min-width: 0px; */
     padding : 28px;
 }
-
 .spacer {
     flex: 0 0 220px;
-    width: 220px;
+}
+.spacer img {
+    padding: 0 80px;
+    display: block;
+    width: 300px;
+    height: auto;
+    bottom: 1px;
+    position: fixed;
 }
 
 .sub-menu {
@@ -311,16 +319,9 @@ main {
     background: var(--mint-pale);
     border-color: var(--mint);
     transform: translateX(15px);
-    /* text-decoration: none; */ /*밑줄 등 텍스트 장식 제거*/
 }
 
-/* .menu-item.active a {
-    background: var(--mint);
-    color: var(--white);
-    border-color: var(--mint);
-} */
-
-[id] {
+[id] { /* id 속성이 있는 모든 HTML 요소에 대해, 스크롤 이동 시 위쪽 여백을 90px 확보하라 */
     scroll-margin-top: 90px;
 }
 
@@ -350,19 +351,18 @@ input[type="reset"] {
 }
 .btn:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
     background: var(--mint);
-    transform: translateY(-2px); /*위로 이동*/
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
     text-decoration: none;
     color: var(--white);
 }
-
 fieldset {
     display: flex;
     flex-direction: column;
     gap: 16px;
     margin: 0 0 24px;
     padding: 20px 24px;
-    border: 2px solid var(--beige-dark);
+    border: 2px solid var(--beige-dark); /* 두께, 모양, 색상 */
     border-radius: var(--radius-md);
     background: var(--white);
 }
@@ -377,7 +377,7 @@ legend {
 
 .form-group {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 16px;
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 500;
@@ -402,7 +402,9 @@ legend {
     transition: border-color .25s, box-shadow .25s;
 }
 
-textarea { resize: vertical; }
+textarea { 
+    resize: vertical;
+    margin : 20px;}
 
 /* input:focus, select:focus, textarea:focus {
     outline: none;
@@ -418,7 +420,7 @@ table {
 
 caption {
     margin-bottom: 10px;
-    font: 700 1rem "Gowun Dodum", sans-serif;
+    font: 800 1.1rem "Gowun Dodum", sans-serif;
     color: var(--mint-dark);
 }
 
@@ -443,12 +445,12 @@ tbody tr:nth-child(even) td { background: var(--beige); }
     font-size: .85rem;
     color: var(--text-sub);
     background: var(--mint-pale);
-    border-top: 1px solid var(--beige-dark);
+    /* border-top: 1px solid var(--beige-dark); */
 }
 
 .footer p { margin: 4px 0; }
 .footer-title {
-    font-weight: 700;
+    font-weight: 800;
     color: var(--text-dark);
     font-size: 1rem;
 }
