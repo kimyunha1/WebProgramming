@@ -256,6 +256,7 @@ main {
 .intro img {
     width: 35px;
     height: 35px;
+    border-radius: 20%;
 }
 .intro img, .intro h1 {
     display: flex;
@@ -294,6 +295,10 @@ main {
     height: auto;
     bottom: 1px;
     position: fixed;
+}
+.spacer img:hover {
+    transform: translateY(-10px);
+    border-radius: 99%;
 }
 
 .sub-menu {
@@ -377,26 +382,26 @@ legend {
 
 .form-group {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     gap: 16px;
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 500;
+    margin : 8px 0;
 }
 
-.form-group > input,
+.form-group > input, 
 .form-group > select,
-.form-group > textarea {
+.form-group > textarea { /* 입력창 자동 확장 */
     flex: 1;
     min-width: 0;
 }
 
 .input-area input,
 .input-area select,
-.input-area textarea {
-    padding: 10px 12px;
+.input-area textarea { /* 입력창 공통 디자인 */
+    padding: 8px 10px;
     font: inherit;
     color: var(--text-dark);
-    background: var(--white);
     border: 1px solid var(--beige-dark);
     border-radius: var(--radius-sm);
     transition: border-color .25s, box-shadow .25s;
@@ -404,7 +409,8 @@ legend {
 
 textarea { 
     resize: vertical;
-    margin : 20px;}
+
+}
 
 /* input:focus, select:focus, textarea:focus {
     outline: none;
@@ -439,13 +445,12 @@ th, td {
 tbody tr:nth-child(even) td { background: var(--beige); }
 
 .footer {
-    margin-top: 40px;
     padding: 28px 24px 40px;
     text-align: center;
     font-size: .85rem;
     color: var(--text-sub);
     background: var(--mint-pale);
-    /* border-top: 1px solid var(--beige-dark); */
+    border-top: 1px solid var(--beige-dark);
 }
 
 .footer p { margin: 4px 0; }

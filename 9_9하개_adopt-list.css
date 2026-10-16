@@ -1,0 +1,85 @@
+/* adopt-list.css */
+
+.region-menu .sub-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 16px;
+  /* justify-content: center; */
+}
+
+.menu-item a:hover {
+    background: var(--mint-pale);
+    border-color: var(--mint);
+    transform: translateY(10px);
+    /* text-decoration: none; */
+}
+
+/* 2. 지역별 강아지 카드 목록 (한 줄 4개 배치) */
+.dog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.dog-card {
+  /* 한 줄에 4개 배치: 간격 3개(16px * 3 = 48px)를 뺀 후 4로 나눔 */
+    flex: 0 0 calc((100% - 48px) / 4);
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.dog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.dog-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover; 
+    display: block;
+}
+
+.dog-info {
+    padding: 14px 16px;
+}
+
+.dog-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.dog-info p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--text-sub);
+    line-height: 1.5;
+}
+
+.back-to-region {
+    text-align: right;
+    margin-top: 12px;
+    font-size: 0.88rem;
+}
+
+.notice {
+    padding: 24px 28px;
+    background: var(--beige);
+    border-radius: var(--radius-md);
+    margin-top: 36px;
+}
+
+.notice h2 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.notice p {
+    margin: 0;
+    color: var(--text-dark);
+}

@@ -1,8 +1,26 @@
 /* border-radius: var(--radius-md); 
 넘 귀 일듯!!!
-
-
-
-
 */
 
+.intro{
+    padding: 20px 0 0;
+    background-color: var(--white);
+}
+
+.banner ::after {
+    border: none;
+    border-top: 1px solid var(--beige-dark);
+    margin: 40px 0;
+}
+.banner img{
+    display: flex;
+    width: 1150px;
+    height: auto;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.intro :hover {
+    transform: translateX(2px);
+    box-shadow: var(--shadow-hover);
+}
