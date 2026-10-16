@@ -49,7 +49,7 @@
                 <div class="sub-menu">
                     <div class="menu-item active"><a href="#guide">후원금 사용 안내</a></div>
                     <div class="menu-item"><a href="#status">집행 현황</a></div>
-                    <div class="menu-item"><a href="#account">후원 계좌</a></div>
+                    <div class="menu-item"><a href="#account">후원 신청</a></div>
                 </div>
             </div>
 
@@ -64,6 +64,16 @@
                         </p>
                     </section>
                 </div>
+
+                <!-- 요청하신 섹션 추가 위치 -->
+                <section align="center">
+                    <h3>아이들에게 따뜻한 응원의 마음을 보내주세요!</h3>
+                    <p>버튼을 눌러 보호소 아이들에게 사랑의 하트를 보내주세요.</p>
+                    
+                    <button type="button">
+                        ♥ 아이들 응원하기
+                    </button>
+                </section>
 
                 <hr>
 
@@ -109,15 +119,69 @@
                 <hr>
 
                 <section id="account">
-                    <h2>후원 계좌 안내</h2>
-                    <p><strong>농협은행:</strong> 301-0000-0000-01 (예금주: 서울유기견보호센터)</p>
-                    <p><strong>신한은행:</strong> 110-000-000000 (예금주: 서울유기견보호센터)</p>
+                    <h2>후원 신청하기</h2>
 
-                    <div class="donate-box">
-                        <h3>아이들에게 따뜻한 응원의 마음을 보내주세요!</h3>
-                        <p>버튼을 눌러 보호소 아이들에게 사랑의 마음을 전해보세요.</p>
-                        <button type="button" class="btn">♥ 아이들 응원하기 ♥</button>
-                    </div>
+                    <form method="post" action="#">
+                        <fieldset>
+                            <legend><strong>1. 후원 유형 및 금액 선택</strong></legend>
+                            
+                            <p><strong>후원 방식:</strong></p>
+                            <div>
+                                <label><input type="radio" name="donate_type" value="monthly" checked> 정기 후원 (매월)</label> &nbsp;&nbsp;
+                                <label><input type="radio" name="donate_type" value="once"> 일시 후원</label> &nbsp;&nbsp;
+                                <label><input type="radio" name="donate_type" value="goods"> 물품 후원</label>
+                            </div>
+
+                            <p><strong>후원 금액:</strong></p>
+                            <div>
+                                <label><input type="radio" name="amount" value="10000" checked> 10,000원</label> &nbsp;&nbsp;
+                                <label><input type="radio" name="amount" value="30000"> 30,000원</label> &nbsp;&nbsp;
+                                <label><input type="radio" name="amount" value="50000"> 50,000원</label> &nbsp;&nbsp;
+                                <label><input type="radio" name="amount" value="custom"> 기타 직접 입력:</label>
+                                <input type="number" name="custom_amount" min="1000" step="1000" placeholder="금액 입력"> 원
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>2. 후원자 정보 입력</strong></legend>
+
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="20%"><label for="userName">성명:</label></td>
+                                    <td width="80%"><input type="text" id="userName" name="userName" required placeholder="이름을 입력하세요"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="userTel">연락처:</label></td>
+                                    <td><input type="tel" id="userTel" name="userTel" required placeholder="010-0000-0000"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="userEmail">이메일:</label></td>
+                                    <td><input type="email" id="userEmail" name="userEmail" required placeholder="example@email.com"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="payMethod">결제 수단:</label></td>
+                                    <td>
+                                        <select id="payMethod" name="payMethod">
+                                            <option value="credit">신용카드</option>
+                                            <option value="bank">계좌이체</option>
+                                            <option value="vbank">무통장입금</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+
+                        <br>
+                        <div align="center">
+                            <label>
+                                <input type="checkbox" name="agree" required> 
+                                개인정보 수집 및 후원금 이용 약관에 동의합니다. (필수)
+                            </label>
+                            <br><br>
+                            <input type="submit" value="후원 신청하기">
+                            <input type="reset" value="다시 작성">
+                        </div>
+                    </form>
                 </section>
 
             </div>
