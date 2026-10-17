@@ -37,6 +37,7 @@
   display: none;
 }
 
+/* 2. 상태 알림 뱃지 (보호 중) */
 .protection-status {
   display: inline-block;
   margin-bottom: 8px;
@@ -83,6 +84,7 @@
   margin-top: 12px;
 }
 
+/* 4. 입양 신청 버튼 및 돌아가기 링크 */
 .apply-link {
   margin-top: 24px;
 }
@@ -91,4 +93,9 @@
   margin-top: 36px;
   text-align: center;
   font-size: 0.92rem;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
