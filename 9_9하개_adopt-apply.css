@@ -55,3 +55,94 @@
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 500;
 }
+/* =========================================================
+   입양신청 폼 추가 수정
+   ========================================================= */
+
+/* 라디오 버튼 글씨체: 다른 질문(form-group)과 통일 */
+.radio-group { font-family: "Gowun Dodum", sans-serif; }
+
+/* 짧은 질문: 너비 고정 + 오른쪽 정렬 */
+.form-group > label:first-child {
+    flex: 0 0 120px;
+    text-align: right;
+}
+
+/* 짧은 입력칸 */
+.form-group > .short { flex: 0 0 260px; }
+.form-group > .tiny  { flex: 0 0 100px; }
+.radio-group > .short { width: 260px; }
+.radio-group > .tiny  { width: 100px; }
+
+/* 긴 질문(textarea): 왼쪽 정렬 + 초록 강조 */
+.form-group:has(textarea) > label:first-child {
+    flex: none;
+    text-align: left;
+    font-size: 1.1rem;
+    color: var(--mint-dark);
+}
+
+/* 라디오 아래 추가 질문 */
+.radio-group > .form-group.sub-question { flex-basis: 100%; }
+.form-group.sub-question > label:first-child {
+    flex: none;
+    text-align: left;
+}
+
+/* 경고 문구: '아니오' 선택 시에만 표시 */
+.warning {
+    display: none;
+    flex-basis: 100%;
+    margin: 4px 0 0;
+    padding: 10px 14px;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--danger-dark);
+    background: #FDF0F0;
+    border-left: 4px solid var(--danger);
+    border-radius: var(--radius-sm);
+}
+.warning::before { content: "⚠ "; }
+#landlord-no:checked ~ .warning,
+#family-no:checked ~ .warning { display: block; }
+
+/* 질문 사이 구분선 */
+.radio-group {
+    padding: 20px 0;          /* 위아래 여백 똑같이 */
+    margin: 0;                /* 팀원 코드의 아래 여백 16px 없애기 */
+    border-bottom: 1px solid var(--beige-dark);
+    border-radius: 0;
+}
+.radio-group:first-child { padding-top: 0; }    /* 구역 맨 위 질문은 위 여백 없음 */
+.radio-group:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* 라디오 질문 안 입력칸: 높이 줄이기 */
+.radio-group input[type="text"],
+.radio-group input[type="number"],
+.radio-group select {
+    padding: 6px 10px;
+    line-height: 1.4;
+}
+
+/* 만 19세 이상: 빨간 볼드 */
+.hint strong {
+    color: var(--danger-dark);
+    font-weight: 700;
+}
+
+/* 라디오 질문: 질문 옆에 선택지 배치 */
+.radio-group > legend {
+    float: left;          /* legend를 일반 칸처럼 만들어 선택지 옆으로 */
+    flex: 0 0 270px;
+    padding: 0;
+    margin: 0;
+}
+/* 경고 문구·추가 질문은 선택지 아래, 선택지 시작 위치에 맞춤 */
+.radio-group > .warning,
+.radio-group > .form-group.sub-question {
+    flex-basis: calc(100% - 285px);
+    margin-left: 285px;
+}
