@@ -188,8 +188,6 @@ figcaption {
 .btn-chip:hover {
     background: var(--mint);
     color: var(--white) !important;
-    /* text-decoration: none; */
-    /*링크에 밑줄이 생기지 않도록 설정*/
 }
 
 .site-nav {
@@ -361,21 +359,21 @@ input[type="reset"] {
     text-decoration: none;
     color: var(--white);
 }
+
 fieldset {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin: 0 0 24px;
+    margin-bottom: 24px;
     padding: 20px 24px;
-    border: 2px solid var(--beige-dark); /* 두께, 모양, 색상 */
+    border: 2px solid var(--beige-dark);
     border-radius: var(--radius-md);
     background: var(--white);
 }
 
 legend {
-    font-size: 1.1rem;
     padding: 0 10px;
-    font-family: "Gowun Dodum", sans-serif;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--mint-dark);
 }
@@ -384,39 +382,29 @@ legend {
     display: flex;
     align-items: center;
     gap: 16px;
-    font-family: "Gowun Dodum", sans-serif;
+    margin: 8px 0;
     font-weight: 500;
-    margin : 8px 0;
 }
 
-.form-group > input, 
+.form-group > input,
 .form-group > select,
-.form-group > textarea { /* 입력창 자동 확장 */
+.form-group > textarea {
     flex: 1;
     min-width: 0;
 }
 
-.input-area input,
-.input-area select,
-.input-area textarea { /* 입력창 공통 디자인 */
+input[type="text"], input[type="tel"], input[type="number"], input[type="date"], select, textarea {
     padding: 8px 10px;
     font: inherit;
     color: var(--text-dark);
     border: 1px solid var(--beige-dark);
     border-radius: var(--radius-sm);
-    transition: border-color .25s, box-shadow .25s;
+    transition: border-color 0.25s, box-shadow 0.25s;
 }
 
-textarea { 
+textarea {
     resize: vertical;
-
 }
-
-/* input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--mint);
-    box-shadow: 0 0 0 3px var(--mint-pale);
-} */
 
 table {
     width: 100%;
@@ -459,3 +447,4 @@ tbody tr:nth-child(even) td { background: var(--beige); }
     color: var(--text-dark);
     font-size: 1rem;
 }
+
