@@ -89,23 +89,6 @@
     text-align: left;
 }
 
-/* 경고 문구: '아니오' 선택 시에만 표시 */
-.warning {
-    display: none;
-    flex-basis: 100%;
-    margin: 4px 0 0;
-    padding: 10px 14px;
-    font-size: .9rem;
-    line-height: 1.6;
-    color: var(--danger-dark);
-    background: #FDF0F0;
-    border-left: 4px solid var(--danger);
-    border-radius: var(--radius-sm);
-}
-.warning::before { content: "⚠ "; }
-#landlord-no:checked ~ .warning,
-#family-no:checked ~ .warning { display: block; }
-
 /* 질문 사이 구분선 */
 .radio-group {
     padding: 20px 0;          /* 위아래 여백 똑같이 */
