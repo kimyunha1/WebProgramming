@@ -60,19 +60,17 @@
                         <h2>후원금 사용 안내</h2>
                         <p>
                             보내주신 소중한 후원금은 단 한 원도 허투루 쓰이지 않으며, <br>
-                            구조된 유기견들의 <mark>응급 치료비, 정기 건강검진, 사료 및 영양제 구매, 보호소 환경 개선</mark>에 전액 투명하게 사용됩니다.
+                            구조된 유기견들의 <em>응급 치료비, 정기 건강검진, 사료 및 영양제 구매, 보호소 환경 개선</em>에 전액 투명하게 사용됩니다.
                         </p>
                     </section>
                 </div>
 
-                <section align="center">
+                <div class="donate-box">
                     <h3>아이들에게 따뜻한 응원의 마음을 보내주세요!</h3>
                     <p>버튼을 눌러 보호소 아이들에게 사랑의 하트를 보내주세요.</p>
                     
-                    <button type="button">
-                        ♥ 아이들 응원하기
-                    </button>
-                </section>
+                    <button type="button">♥ 아이들 응원하기</button>
+                </div>
 
                 <hr>
 
@@ -117,32 +115,34 @@
 
                 <hr>
 
-                <section id="account">
+                <section id="account" class "account">
                     <h2>후원 신청하기</h2>
 
                     <form method="post" action="#">
                         <fieldset>
-                            <legend><strong>1. 후원 유형 및 금액 선택</strong></legend>
+                            <legend>1. 후원 유형 및 금액 선택</legend>
                             
                             <p><strong>후원 방식:</strong></p>
-                            <div>
+
+                            <div class="option-group">
                                 <label><input type="radio" name="donate_type" value="monthly" checked> 정기 후원 (매월)</label> &nbsp;&nbsp;
                                 <label><input type="radio" name="donate_type" value="once"> 일시 후원</label> &nbsp;&nbsp;
                                 <label><input type="radio" name="donate_type" value="goods"> 물품 후원</label>
                             </div>
 
                             <p><strong>후원 금액:</strong></p>
-                            <div>
+
+                            <div class="option-group">
                                 <label><input type="radio" name="amount" value="10000" checked> 10,000원</label> &nbsp;&nbsp;
                                 <label><input type="radio" name="amount" value="30000"> 30,000원</label> &nbsp;&nbsp;
                                 <label><input type="radio" name="amount" value="50000"> 50,000원</label> &nbsp;&nbsp;
                                 <label><input type="radio" name="amount" value="custom"> 기타 직접 입력:</label>
-                                <input type="number" name="custom_amount" min="1000" step="1000" placeholder="금액 입력"> 원
+                                <input type="number" name="custom_amount" class="input-num" min="1000" step="1000" placeholder="금액 입력"> 원
                             </div>
                         </fieldset>
 
                         <fieldset>
-                            <legend><strong>2. 후원자 정보 입력</strong></legend>
+                            <legend>2. 후원자 정보 입력</legend>
 
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
