@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>   
+
+<head>
     <meta charset="UTF-8">
     <meta name="author" content="김사랑, 김윤하, 조민체, 최석인">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>9하개 | 입양 신청</title>
+
     <link rel="stylesheet" href="9_9하개_common2.css">
-    <link rel="stylesheet" href="9_9하개_adopt-apply.css">
+    <link rel="stylesheet" href="adopt-apply3.css">
 </head>
 
 <body>
+
     <header class="site-header">
+
         <div class="top-bar">
             <a href="9_9하개_main.html" class="brand">
                 <img src="9_logo.png" alt="9하개 로고">
@@ -32,10 +37,11 @@
                 <li><a href="9_9하개_donate.html">기부</a></li>
             </ul>
         </nav>
+
     </header>
 
-    <main> 
-        
+    <main>
+
         <!--단독 상단 소개 블록-->
         <div class="intro">
             
@@ -58,10 +64,9 @@
                     <div class="menu-item"><a href="#step6">6. 동의 체크리스트</a></div>
                 </div>
             </div>
-            
-            <!--중앙 메인 콘텐츠 영역-->
+            <!-- 중앙 메인 콘텐츠 -->
             <div class="main-content">
-                <!--입양 절차-->
+                <!-- 입양 절차 -->
                 <section class="process">
                     <h2>입양 절차</h2>
                     <ol>
@@ -72,12 +77,13 @@
                     </ol>
                 </section>
 
+
                 <form method="get" action="#">
                     <fieldset id="step1">
                         <legend>1. 입양 희망 강아지</legend>
                         <div class="input-area">
                             <div class="form-group">
-                                <label for="dog">강아지 이름:</label>
+                                <label for="dog">강아지 이름</label>
                                 <select class="short" id="dog" name="dog" required>
                                     <option value="">선택하세요</option>
                                     <option value="dog1">망고(골든리트리버, 1살)</option>
@@ -95,16 +101,18 @@
                         </div>
                     </fieldset>
 
+                    <!-- 2. 신청자 기본 정보 -->
                     <fieldset id="step2">
                         <legend>2. 신청자 기본 정보</legend>
                         <div class="input-area">
                             <div class="form-group">
-                                <label for="username">이름:</label>
+                                <label for="username">이름</label>
                                 <input type="text" class="short" id="username" name="username" placeholder="이름을 입력하세요" required>
                             </div>
 
+
                             <div class="form-group">
-                                <label for="phone">전화번호:</label>
+                                <label for="phone">전화번호</label>
                                 <input type="tel" class="short" id="phone" name="phone"
                                 pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" 
                                 placeholder="010-1234-5678"
@@ -130,8 +138,8 @@
                                 <small class="hint"><strong>만 19세 이상</strong>만 신청할 수 있습니다</small>
                             </div>
 
-                            <div class="form-group address-group">
-                                <label for="region">주소:</label>
+                            <div class="form-group">
+                                <label for="region">주소</label>
                                 <select class="short" id="region" name="region" required>
                                     <option value="">시/도 선택</option>
                                     <option value="seoul">서울특별시</option>
@@ -152,105 +160,282 @@
                                     <option value="gyeongnam">경상남도</option>
                                     <option value="jeju">제주특별자치도</option>
                                 </select>
-                                <label for="address">상세 주소:</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">상세 주소</label>
                                 <input type="text" id="address" name="address"
                                 placeholder="예: 용산구 청파로47길 100" required>
                             </div>
                         </div>
                     </fieldset>
 
+                    <!-- 3. 가족 및 주거 환경 -->
                     <fieldset id="step3">
                         <legend>3. 가족 및 주거 환경</legend>
                         <div class="input-area">
+                            <!-- 주거 형태 -->
                             <fieldset class="radio-group">
-                                <legend>주거 형태</legend>                 
-                                <input type="radio" name="housing" value="apartment" id="apt" required>
-                                <label for="apt">아파트</label>
-                                <input type="radio" name="housing" value="villa" id="villa">
-                                <label for="villa">빌라/다세대주택</label>
-                                <input type="radio" name="housing" value="house" id="house">
-                                <label for="house">단독주택</label>
-                                <input type="radio" name="housing" value="officetel" id="officetel">
-                                <label for="officetel">오피스텔</label>
-                                <input type="radio" name="housing" value="other" id="housing-other">
-                                <label for="housing-other">기타</label>
+                                <legend>주거 형태</legend>
+                                <div class="radio-options">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="housing"
+                                            value="apartment"
+                                            required
+                                        >
+                                        아파트
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="housing"
+                                            value="villa"
+                                        >
+                                        빌라/다세대주택
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="housing"
+                                            value="house"
+                                        >
+                                        단독주택
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="housing"
+                                            value="officetel"
+                                        >
+                                        오피스텔
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="housing"
+                                            value="other"
+                                        >
+                                        기타
+                                    </label>
+                                </div>
                             </fieldset>
 
+                            <!-- 거주 형태 -->
                             <fieldset class="radio-group">
                                 <legend>거주 형태</legend>
-                                <input type="radio" name="ownership" value="own" id="own" required>
-                                <label for="own">자가</label>
-                                <input type="radio" name="ownership" value="jeonse" id="jeonse">
-                                <label for="jeonse">전세</label>
-                                <input type="radio" name="ownership" value="monthly" id="monthly">
-                                <label for="monthly">월세</label>
+                                <div class="radio-options">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="ownership"
+                                            value="own"
+                                            required
+                                        >
+                                        자가
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="ownership"
+                                            value="jeonse"
+                                        >
+                                        전세
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="ownership"
+                                            value="monthly"
+                                        >
+                                        월세
+                                    </label>
+                                </div>
                             </fieldset>
 
+
+                            <!-- 집주인 동의 여부 -->
                             <fieldset class="radio-group">
                                 <legend>집주인이 반려견 양육을 허락했나요?</legend>
-                                <input type="radio" name="landlord-ok" value="landlord-yes" id="landlord-yes" required>
-                                <label for="landlord-yes">예</label>
-                                <input type="radio" name="landlord-ok" value="landlord-no" id="landlord-no">
-                                <label for="landlord-no">아니오</label>
-                                <input type="radio" name="landlord-ok" value="landlord-none" id="landlord-none">
-                                <label for="landlord-none">해당 없음(자가)</label>
-                                <p class="warning">집주인의 동의 없이는 입양이 어려울 수 있어요. 상담 전에 꼭 확인해주세요.</p>
+                                <div class="radio-options">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="landlord-ok"
+                                            value="landlord-yes"
+                                            required
+                                        >
+                                        예
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="landlord-ok"
+                                            value="landlord-no"
+                                        >
+                                        아니오
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="landlord-ok"
+                                            value="landlord-none"
+                                        >
+                                        해당 없음(자가)
+                                    </label>
+                                </div>
+
+                                <p class="warning">
+                                    집주인의 동의 없이는 입양이 어려울 수 있어요.
+                                    상담 전에 꼭 확인해주세요.
+                                </p>
                             </fieldset>
 
-                            <fieldset class="radio-group">
-                                <legend>함께 사는 가족 수(본인 포함)</legend>
-                                <input type="number" class="tiny" id="family" name="family" min="1" max="100" title="함께 사는 가족 수" required> 명
-                            </fieldset>
+                            <!-- 가족 수 -->
+                            <div class="form-group">
+                                <label for="family">
+                                    함께 사는 가족 수(본인 포함)
+                                </label>
+                                <div class="unit-input">
+                                    <input
+                                        type="number"
+                                        id="family"
+                                        name="family"
+                                        min="1"
+                                        max="100"
+                                        required
+                                    >
+                                    <span>명</span>
+                                </div>
+                            </div>
 
+
+                            <!-- 가족 동의 여부 -->
                             <fieldset class="radio-group">
                                 <legend>가족이 모두 동의했나요?</legend>
-                                <input type="radio" name="family-ok" value="family-yes" id="family-yes" required>
-                                <label for="family-yes">예</label>
-                                <input type="radio" name="family-ok" value="family-no" id="family-no">
-                                <label for="family-no">아니오</label>
-                                <p class="warning">가족의 동의 없이는 입양이 어려울 수 있어요. 상담 전에 꼭 확인해주세요.</p>
+                                <div class="radio-options">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="family-ok"
+                                            value="family-yes"
+                                            required
+                                        >
+                                        예
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="family-ok"
+                                            value="family-no"
+                                        >
+                                        아니오
+                                    </label>
+                                </div>
+                                <p class="warning">
+                                    가족의 동의 없이는 입양이 어려울 수 있어요.
+                                    상담 전에 꼭 확인해주세요.
+                                </p>
                             </fieldset>
 
-                            <fieldset class="radio-group">
-                                <legend>낮 동안 반려견이 혼자 있는 시간</legend>
-                                <select class="short" id="alone-time" name="alone-time" required>
+
+                            <!-- 혼자 있는 시간 -->
+                            <div class="form-group">
+                                <label for="alone-time">
+                                    낮 동안 반려견이 혼자 있는 시간
+                                </label>
+                                <select
+                                    id="alone-time"
+                                    name="alone-time"
+                                    required>
                                     <option value="">선택하세요</option>
-                                    <option value="none">거의 없음(재택 등)</option>
-                                    <option value="under4">4시간 미만</option>
+                                    <option value="none">
+                                        거의 없음(재택 등)
+                                    </option>
+                                    <option value="under4">
+                                        4시간 미만
+                                    </option>
                                     <option value="4to8">4~8시간</option>
-                                    <option value="over8">8시간 이상</option>
+                                    <option value="over8">
+                                        8시간 이상
+                                    </option>
                                 </select>
-                            </fieldset>
+                            </div>
                         </div>
                     </fieldset>
 
+
+                    <!-- 4. 반려 경험 -->
                     <fieldset id="step4">
                         <legend>4. 반려 경험</legend>
+
                         <div class="input-area">
                             <fieldset class="radio-group">
                                 <legend>반려동물을 키워 본 적 있으신가요?</legend>
-                                <input type="radio" name="exp" value="exp-yes" id="exp-yes" required>
-                                <label for="exp-yes">예</label>
-                                <input type="radio" name="exp" value="exp-no" id="exp-no">
-                                <label for="exp-no">아니오</label>
+
+                                <div class="radio-options">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="exp"
+                                            value="exp-yes"
+                                            required
+                                        >
+                                        예
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="exp"
+                                            value="exp-no"
+                                        >
+                                        아니오
+                                    </label>
+                                </div>
                             </fieldset>
 
                             <fieldset class="radio-group">
                                 <legend>지금 키우고 있는 동물이 있나요?</legend>
-                                <input type="radio" name="pet" value="pet-yes" id="pet-yes" required>
-                                <label for="pet-yes">예</label>
-                                <input type="radio" name="pet" value="pet-no" id="pet-no">
-                                <label for="pet-no">아니오</label>
+                                <div class="radio-options">
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="pet"
+                                            value="pet-yes"
+                                            required
+                                        >
+                                        예
+                                    </label>
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="pet"
+                                            value="pet-no"
+                                        >
+                                        아니오
+                                    </label>
+                                </div>
                                 <div class="form-group sub-question">
-                                    <label for="pet-detail">예인 경우, 어떤 동물인가요?</label>
-                                    <input type="text" class="short" name="pet-detail" id="pet-detail" placeholder="예: 강아지 1마리, 5살">
+                                    <label for="pet-detail">
+                                        예인 경우, 어떤 동물인가요?
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="pet-detail"
+                                        name="pet-detail"
+                                        placeholder="예: 강아지 1마리, 5살"
+                                    >
                                 </div>
                             </fieldset>
                         </div>
                     </fieldset>
 
+
+                    <!-- 5. 입양 동기와 계획 -->
                     <fieldset id="step5">
                         <legend>5. 입양 동기와 계획</legend>
+
                         <div class="input-area">
                             <div class="form-group is-column">
                                 <label for="reason">1. 입양을 결심하게 된 이유를 알려주세요</label>
@@ -270,51 +455,66 @@
                         </div>
                     </fieldset>
 
+                    <!-- 6. 동의 체크리스트 -->
                     <fieldset id="step6">
                         <legend>6. 동의 체크리스트</legend>
                         <div class="input-area">
-                            <div class="checklist">
+                            <label class="checklist">
                                 <input type="checkbox" id="lifetime" name="lifetime" value="yes" required>
-                                <label for="lifetime">평생 책임지고 키우겠습니다.</label>
-                            </div>
-                            <div class="checklist">
+                                <span>평생 책임지고 키우겠습니다.</span>
+                            </label>
+                            <label class="checklist">
                                 <input type="checkbox" id="cost" name="cost" value="yes" required>
-                                <label for="cost">사료비, 예방접종, 병원비 등 비용을 감당할 수 있습니다.</label>
-                            </div>
-                            <div class="checklist">
+                                <span>
+                                    사료비, 예방접종, 병원비 등 비용을 감당할 수 있습니다.
+                                </span>
+                            </label>
+                            <label class="checklist">
                                 <input type="checkbox" id="neuter" name="neuter" value="yes" required>
-                                <label for="neuter">(중성화가 안 된 경우) 중성화 수술에 동의합니다.</label>
-                            </div>
-                            <div class="checklist">
+                                <span>
+                                    (중성화가 안 된 경우) 중성화 수술에 동의합니다.
+                                </span>
+                            </label>
+                            <label class="checklist">
                                 <input type="checkbox" id="register" name="register" value="yes" required>
-                                <label for="register">동물 등록(내장 칩)을 하겠습니다.</label>
-                            </div>
-                            <div class="checklist">
+                                <span>동물 등록(내장 칩)을 하겠습니다.</span>
+                            </label>
+                            <label class="checklist">
                                 <input type="checkbox" id="contact" name="contact" value="yes" required>
-                                <label for="contact">입양 후 일정 기간 사진이나 소식을 보내고, 필요하면 가정방문에 협조하겠습니다.</label>
-                            </div>
-                            <div class="checklist">
+                                <span>
+                                    입양 후 일정 기간 사진이나 소식을 보내고, 필요하면 가정방문에 협조하겠습니다.
+                                </span>
+                            </label>
+                            <label class="checklist">
                                 <input type="checkbox" id="no-abandon" name="no-abandon" value="yes" required>
-                                <label for="no-abandon">학대하거나 유기하지 않겠습니다.</label>
-                            </div>
-                            <div class="checklist">
+                                <span>학대하거나 유기하지 않겠습니다.</span>
+                            </label>
+                            <label class="checklist">
                                 <input type="checkbox" id="agree-privacy" name="agree-privacy" value="yes" required>
-                                <label for="agree-privacy">개인정보 수집·이용에 동의합니다.</label>
-                            </div>
+                                <span>
+                                    개인정보 수집·이용에 동의합니다.
+                                </span>
+                            </label>
                         </div>
                     </fieldset>
-                    
-                    <input type="submit" value="입양 신청하기">
-                    <input type="reset" value="다시 작성">
+
+                    <!-- 버튼 -->
+                    <div class="form-buttons">
+                        <input type="submit" value="입양 신청하기">
+                        <input type="reset" value="다시 작성">
+                    </div>
                 </form>
             </div>
 
-            <!--오른쪽 대칭용 여백 영역-->
+
+            <!-- 오른쪽 장식 영역 -->
             <div class="spacer">
                 <img src="9_right_icon.png" alt="강아지 이미지">
             </div>
+
         </div>
     </main>
+
 
     <footer class="footer">
         <p class="footer-title">9하개</p>
