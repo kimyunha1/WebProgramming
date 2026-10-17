@@ -173,31 +173,33 @@
                 <form method="get" action="#">
                     <fieldset>
                         <legend>후기 작성</legend>
-                        <div class="form-group">
-                            <label for="nickname">닉네임</label>
-                            <input type="text"  id="nickname" name="nickname" required>
-                        </div>
+                        <div class="input-area">
+                            <div class="form-group">
+                                <label for="nickname">닉네임</label>
+                                <input type="text" class="short" id="nickname" name="nickname" required>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="review-title">제목</label>
-                            <input type="text" id="review-title" name="review-title" required>
-                        </div>
+                            <div class="form-group">
+                                <label for="review-title">제목</label>
+                                <input type="text" class="short" id="review-title" name="review-title" required>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="adopt-month">입양 날짜</label>
-                            <input type="month" id="adopt-month" name="adopt-month" max="2026-10" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="adopt-review">입양 후기 작성</label>
-                            <textarea id="adopt-review" name="adopt-review" rows="3"
-                            placeholder="여러분의 입양 후기를 작성해주세요!" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="review-photo">사진 첨부</label>
-                            <input type="file" id="review-photo" name="review-photo" required>
+                            <div class="form-group">
+                                <label for="adopt-month">입양 날짜</label>
+                                <input type="month" class="short" id="adopt-month" name="adopt-month" max="2026-10" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="adopt-review">입양 후기 작성</label>
+                                <textarea id="adopt-review" name="adopt-review" rows="3"
+                                placeholder="여러분의 입양 후기를 작성해주세요!" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="review-photo">사진 첨부</label>
+                                <input type="file" id="review-photo" name="review-photo" required>
+                            </div>
                         </div>
                     </fieldset>
-                <input type="submit" value="등록">
+                <input type="submit" value="후기 등록하기">
                 </form>
                 <p class="apply-link">우리도 가족이 되어볼까요? <a href="9_9하개_adopt-apply.html">입양 신청하기</a></p>
             </div>

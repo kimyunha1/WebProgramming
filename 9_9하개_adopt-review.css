@@ -103,3 +103,19 @@
     border-radius: var(--radius-md);
     font-weight: 500;
 }
+
+/* 질문: 너비 고정 + 오른쪽 정렬 */
+.form-group > label:first-child {
+    flex: 0 0 120px;
+    text-align: right;
+}
+
+/* 후기 내용(textarea)도 질문 옆에, 질문은 입력칸 윗줄에 맞춤 */
+.form-group:has(textarea) { align-items: flex-start; }
+.form-group:has(textarea) > label:first-child { padding-top: 8px; }
+
+/* 입력칸 가로 길이 줄이기 (모든 칸 같은 길이) */
+.form-group > input,
+.form-group > textarea {
+    max-width: 800px;
+}
