@@ -1,131 +1,99 @@
-/* adopt-apply.css  */
+/* adopt-apply.css */
 
+/* 1. 입양 절차 리스트 */
 .process ol {
     margin: 12px 0 24px;
     padding-left: 20px;
 }
-
 .process li {
     margin-bottom: 6px;
     font-weight: 500;
 }
 
+/* 2. 라디오 질문 그룹 (Step 3, 4) */
 .radio-group {
-    display: flex;    
-    flex-direction: row;
+    font: "Gowun Dodum", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 12px 0;
+    margin: 0;
+    border: none;                           
+    border-bottom: 1px solid var(--beige-dark);
+    border-radius: 0;    
+}
+.radio-group:last-of-type {
+    border-bottom: none;
+}
+
+/* 질문 제목 */
+.radio-group > legend,
+.radio-group > .radio-label {
+    margin: 0 0 4px;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* 라디오 선택지 묶음 (가로 나열) */
+.radio-options {
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border: none;
-    padding: 0;
-    margin: 0 0 16px;
-    gap: 10px;
+  justify-content: flex-start; /* ★ 선택지 왼쪽 정렬 */
+    gap: 8px 16px;
+    width: 100%;
 }
 
-.checklist {
-    display: flex;
+.radio-options label {
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 6px;
+    cursor: pointer;
 }
 
-.hint , .warning {
-    /* font-size: 0.85rem;
-    color: var(--text-sub); */
-    padding-top: 10px;
-    font-size: 0.77rem;
-
-    color: var(--danger-dark);
-    font-weight: 500;
+/* 3. 라벨 너비 및 서술형(textarea) 질문 세로 배치 */
+.form-group > label {
+  flex: 0 0 120px; /* 일반 가로 질문 라벨 너비 고정 */
 }
 
-/* .warning {
-    margin-top: 8px;
-    font-size: 0.88rem;
-    color: var(--danger-dark);
-    font-weight: 500;
-} */
-
-.form-group:has(textarea) {
+.form-group.is-column {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
 }
 
-.radio-group legend {
-    font-family: "Gowun Dodum", sans-serif;
-    font-weight: 500;
-}
-/* =========================================================
-   입양신청 폼 추가 수정
-   ========================================================= */
-
-/* 라디오 버튼 글씨체: 다른 질문(form-group)과 통일 */
-.radio-group { font-family: "Gowun Dodum", sans-serif; }
-
-/* 짧은 질문: 너비 고정 + 오른쪽 정렬 */
-.form-group > label:first-child {
-    flex: 0 0 120px;
-    text-align: right;
-}
-
-/* 짧은 입력칸 */
-.form-group > .short { flex: 0 0 260px; }
-.form-group > .tiny  { flex: 0 0 100px; }
-.radio-group > .short { width: 260px; }
-.radio-group > .tiny  { width: 100px; }
-
-/* 긴 질문(textarea): 왼쪽 정렬 + 초록 강조 */
-.form-group:has(textarea) > label:first-child {
+.form-group.is-column > label {
     flex: none;
-    text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--mint-dark);
 }
 
-/* 라디오 아래 추가 질문 */
-.radio-group > .form-group.sub-question { flex-basis: 100%; }
-.form-group.sub-question > label:first-child {
+/* 4. 동의 체크리스트 */
+.checklist {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.checklist input[type="checkbox"] {
+    margin-top: 4px;
     flex: none;
-    text-align: left;
 }
 
-/* 질문 사이 구분선 */
-.radio-group {
-    padding: 20px 0;          /* 위아래 여백 똑같이 */
-    margin: 0;                /* 팀원 코드의 아래 여백 16px 없애기 */
-    border-bottom: 1px solid var(--beige-dark);
-    border-radius: 0;
-}
-.radio-group:first-child { padding-top: 0; }    /* 구역 맨 위 질문은 위 여백 없음 */
-.radio-group:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
+/* 5. 안내 및 경고 문구 */
+.hint {
+    font-size: 0.85rem;
+    color: var(--text-sub);
 }
 
-/* 라디오 질문 안 입력칸: 높이 줄이기 */
-.radio-group input[type="text"],
-.radio-group input[type="number"],
-.radio-group select {
-    padding: 6px 10px;
-    line-height: 1.4;
-}
-
-/* 만 19세 이상: 빨간 볼드 */
-.hint strong {
+.warning {
+    margin-top: 4px;
+    font-size: 0.88rem;
     color: var(--danger-dark);
-    font-weight: 700;
-}
-
-/* 라디오 질문: 질문 옆에 선택지 배치 */
-.radio-group > legend {
-    float: left;          /* legend를 일반 칸처럼 만들어 선택지 옆으로 */
-    flex: 0 0 270px;
-    padding: 0;
-    margin: 0;
-}
-/* 경고 문구·추가 질문은 선택지 아래, 선택지 시작 위치에 맞춤 */
-.radio-group > .warning,
-.radio-group > .form-group.sub-question {
-    flex-basis: calc(100% - 285px);
-    margin-left: 285px;
+    font-weight: 500;
 }
