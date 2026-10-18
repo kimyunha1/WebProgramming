@@ -1,6 +1,5 @@
             /* list.css */
 
-/* 1.page-adopt-list . 지역 선택 메뉴 */
 .page-adopt-list .region-menu .sub-menu {
     flex-direction: row;
     gap: 12px;
@@ -11,7 +10,6 @@
     transform: translateY(10px);
 }
 
-/* 2.page-adopt-list . 강아지 카드 목록 */
 .page-adopt-list .dog-list {
     display: flex;
     flex-wrap: wrap;
@@ -55,15 +53,12 @@
     font-size: .88rem;
     line-height: 1.5;
 }
-
-/* 3.page-adopt-list . 지역 이동 링크 */
 .page-adopt-list .back-to-region {
     margin-top: 12px;
     font-size: .88rem;
     text-align: right;
 }
 
-/* 4.page-adopt-list . 입양 안내 */
 .page-adopt-list .notice {
     margin-top: 36px;
     padding: 24px 28px;
@@ -83,12 +78,10 @@
 
             /* detail.css */
 
-/* 상단 소개 영역 */
 .page-dog-detail .intro {
     background: var(--beige);
 }
 
-/* 강아지 사진 및 상세 정보 배치 */
 .page-dog-detail .dog-detail-layout {
     display: flex;
     align-items: flex-start;
@@ -124,7 +117,6 @@
     display: none;
 }
 
-/* 보호 상태 및 요약 */
 .page-dog-detail .protection-status {
     display: inline-block;
     margin-bottom: 8px;
@@ -141,7 +133,6 @@
     color: var(--text-sub);
 }
 
-/* 상세 정보 목록 */
 .page-dog-detail .dog-info-table {
     margin: 20px 0;
     border-top: 2px solid var(--mint);
@@ -172,7 +163,6 @@
     font-size: .85rem;
 }
 
-/* 하단 버튼 및 목록 이동 */
 .page-dog-detail .apply-link {
     margin-top: 24px;
 }
@@ -191,7 +181,6 @@
 
             /* review.css */
 
-/* 입양 후기 카드 목록 */
 .page-adopt-review .review-list {
     display: flex;
     flex-wrap: wrap;
@@ -219,7 +208,6 @@
     object-fit: cover;
 }
 
-/* 사진 위에 나타나는 후기 설명 */
 .page-adopt-review .review-overlay {
     position: absolute;
     inset: 0;
@@ -285,7 +273,6 @@
     font-weight: 700;
 }
 
-/* 후기 작성 폼 */
 .page-adopt-review .form-group {
     display: flex;
     align-items: center;
@@ -310,7 +297,6 @@
     margin: 0 auto;
 }
 
-/* 입양 신청 안내 */
 .page-adopt-review .apply-link {
     margin-top: 28px;
     padding: 16px;
