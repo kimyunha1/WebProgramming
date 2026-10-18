@@ -80,106 +80,106 @@
 
             /* +++++ detail.css +++++ */
 
-.page-dog-detail .intro {
-    background: var(--beige);
-}
-
-.page-dog-detail .dog-detail-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-}
-
-.page-dog-detail .dog-photos {
-    flex: 0 0 380px;
-}
-
-.page-dog-detail .dog-photos img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    margin-top: 130px;
-    box-shadow: var(--shadow);
-}
-
-.page-dog-detail .dog-detail-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.page-dog-detail .dog-detail-content h2 {
-    margin: 0;
-    padding: 0;
-}
-
-.page-dog-detail .dog-detail-content h2::after {
-    display: none;
-}
-.page-dog-detail .dog-detail-content h2::after {
-    display: none;
-}
-
-.page-dog-detail .protection-status {
-    display: inline-block;
-    margin-bottom: 8px;
-    padding: 4px 14px;
-    color: var(--mint-dark);
-    background: var(--mint-pale);
-    border-radius: var(--radius-pill);
-    font-size: .85rem;
-    font-weight: 700;
-}
-
-.page-dog-detail .dog-summary {
-    margin-bottom: 16px;
-    color: var(--text-sub);
-}
-
-.page-dog-detail .dog-info-table {
-    margin: 20px 0;
-    border-top: 2px solid var(--mint);
-}
-
-.page-dog-detail .info-row {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--beige-dark);
-}
-
-.page-dog-detail .info-row dt {
-    flex: 0 0 120px;
-    padding: 10px 16px;
-    background: var(--beige);
-    font-weight: 700;
-}
-
-.page-dog-detail .info-row dd {
-    flex: 1;
-    margin: 0;
-    padding: 10px 16px;
-}
-
-.page-dog-detail .notice-text {
-    margin-top: 12px;
-    color: var(--text-sub);
-    font-size: .85rem;
-}
-
-.page-dog-detail .apply-link {
-    margin-top: 24px;
-}
-
-.page-dog-detail .back-to-list {
-    margin-top: 36px;
-    text-align: center;
-    font-size: .92rem;
-}
-
-.page-dog-detail .button {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
+    .page-dog-detail .intro {
+        background: var(--beige);
+    }
+    
+    .page-dog-detail .dog-detail-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+    }
+    
+    .page-dog-detail .dog-photos {
+        flex: 0 0 380px;
+    }
+    
+    .page-dog-detail .dog-photos img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        margin-top: 130px;
+        box-shadow: var(--shadow);
+    }
+    
+    .page-dog-detail .dog-detail-content {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .page-dog-detail .dog-detail-content h2 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .page-dog-detail .dog-detail-content h2::after {
+        display: none;
+    }
+    .page-dog-detail .dog-detail-content h2::after {
+        display: none;
+    }
+    
+    .page-dog-detail .protection-status {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 4px 14px;
+        color: var(--mint-dark);
+        background: var(--mint-pale);
+        border-radius: var(--radius-pill);
+        font-size: .85rem;
+        font-weight: 700;
+    }
+    
+    .page-dog-detail .dog-summary {
+        margin-bottom: 16px;
+        color: var(--text-sub);
+    }
+    
+    .page-dog-detail .dog-info-table {
+        margin: 20px 0;
+        border-top: 2px solid var(--mint);
+    }
+    
+    .page-dog-detail .info-row {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--beige-dark);
+    }
+    
+    .page-dog-detail .info-row dt {
+        flex: 0 0 120px;
+        padding: 10px 16px;
+        background: var(--beige);
+        font-weight: 700;
+    }
+    
+    .page-dog-detail .info-row dd {
+        flex: 1;
+        margin: 0;
+        padding: 10px 16px;
+    }
+    
+    .page-dog-detail .notice-text {
+        margin-top: 12px;
+        color: var(--text-sub);
+        font-size: .85rem;
+    }
+    
+    .page-dog-detail .apply-link {
+        margin-top: 24px;
+    }
+    
+    .page-dog-detail .back-to-list {
+        margin-top: 36px;
+        text-align: center;
+        font-size: .92rem;
+    }
+    
+    .page-dog-detail .button {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
 
             /* +++++ review.css +++++*/
 
@@ -246,7 +246,6 @@
     line-height: 1.4;
 }
 
-/* 페이지 번호 */
 .page-adopt-review .pagination {
     display: flex;
     justify-content: center;
