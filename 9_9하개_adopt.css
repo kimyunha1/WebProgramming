@@ -1,4 +1,4 @@
-            /* list.css */
+            /* +++++ list.css +++++ */
 
 .page-adopt-list .region-menu .sub-menu {
     flex-direction: row;
@@ -76,7 +76,7 @@
     color: var(--text-dark);
 }
 
-            /* detail.css */
+            /* +++++ detail.css +++++ */
 
 .page-dog-detail .intro {
     background: var(--beige);
@@ -179,7 +179,7 @@
     gap: 12px;
 }
 
-            /* review.css */
+            /* +++++ review.css +++++*/
 
 .page-adopt-review .review-list {
     display: flex;
@@ -193,7 +193,6 @@
     overflow: hidden;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow);
-    transition: transform .3s, box-shadow .3s;
 }
 
 .page-adopt-review .review-card:hover {
@@ -219,7 +218,6 @@
     color: var(--white);
     background: rgba(46, 59, 54, .88);
     opacity: 0;
-    transition: opacity .3s;
 }
 
 .page-adopt-review .review-card:hover .review-overlay {
@@ -259,7 +257,6 @@
     color: var(--text-dark);
     border: 1px solid var(--beige-dark);
     border-radius: var(--radius-pill);
-    transition: background .25s;
 }
 
 .page-adopt-review .pagination a:hover {
