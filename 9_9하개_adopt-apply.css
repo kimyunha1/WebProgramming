@@ -1,8 +1,6 @@
 
-/* adopt-apply3.page-adopt-apply .css */
+/* +++++ adopt-apply.css +++++ */
 
-
-/* 1. 입양 절차 */
 .page-adopt-apply .process ol {
     margin: 12px 0 24px;
     padding-left: 20px;
@@ -13,20 +11,17 @@
     font-weight: 500;
 }
 
-/* Step 1, 2 입력창 정렬 */
 .page-adopt-apply .step1 .form-group > label
 .page-adopt-apply .step2 .form-group > label {
     flex: 0 0 100px;
 }
 
-/* 입력창 너비 통일 */
 .page-adopt-apply .form-group > input,
 .page-adopt-apply .form-group > select{
     flex: 1;
     min-width: 0;
 }
 
-/* 2.page-adopt-apply . 입력 영역 공통 */
 .page-adopt-apply .form-group {
     display: flex;
     align-items: center;
@@ -35,7 +30,6 @@
     font-weight: 500;
 }
 
-/* 입력 요소가 남은 공간을 채우도록 설정 */
 .page-adopt-apply .input-area input,
 .page-adopt-apply .input-area select,
 .page-adopt-apply .input-area textarea {
@@ -43,15 +37,12 @@
     min-width: 0;
 }
 
-/* 서술형 질문은 세로 배치 */
 .page-adopt-apply .form-group.is-column {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
 }
 
-
-/* 3.page-adopt-apply . 라디오 질문 그룹 */
 .page-adopt-apply .radio-group {
     display: flex;
     flex-direction: column;
@@ -64,7 +55,6 @@
     border-radius: 0;
 }
 
-/* 라디오 질문 제목 */
 .page-adopt-apply .radio-group legend {
     margin: 0 0 4px;
     padding: 0;
@@ -73,7 +63,6 @@
     font-weight: 500;
 }
 
-/* 라디오 선택지 배치 */
 .page-adopt-apply .radio-options {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +71,6 @@
     width: 100%;
 }
 
-/* 라디오 선택지의 텍스트와 버튼 */
 .page-adopt-apply .radio-options label {
     display: inline-flex;
     align-items: center;
@@ -92,16 +80,12 @@
     cursor: pointer;
 }
 
-
-/* 4. 입양 동기와 계획 (Step 5) */
 .page-adopt-apply .step5 label {
     color: var(--mint-dark);
     font-size: 1.page-adopt-apply .05rem;
     font-weight: 500;
 }
 
-
-/* 5. 동의 체크리스트 (Step 6) */
 .page-adopt-apply .checklist {
     display: flex;
     align-items: flex-start;
@@ -110,20 +94,16 @@
     cursor: pointer;
 }
 
-/* 체크박스 크기와 위치 유지 */
 .page-adopt-apply .checklist input[type="checkbox"] {
     flex: none;
     margin-top: 4px;
 }
 
-/* 체크리스트 문구 */
 .page-adopt-apply .checklist span {
     color: var(--text-dark);
     font-size: 0.page-adopt-apply .95rem;
 }
 
-
-/* 6. 안내 및 경고 문구 */
 .page-adopt-apply .warning,
 .page-adopt-apply .hint {
     margin-top: 4px;
@@ -136,7 +116,6 @@
     color: var(--danger-dark);
 }
 
-/* 7. 하단 버튼 */
 .page-adopt-apply .form-buttons {
     display: flex;
     justify-content: center;
