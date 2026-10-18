@@ -1,4 +1,4 @@
-        /* introduce.css */
+        /* +++++ introduce.css +++++ */
 
 .page-introduce .main-content h2, h3, p {
     text-align: center;
@@ -83,7 +83,7 @@
     border-radius: var(--radius-sm);
 }
 
-        /* donate.css */
+        /* +++++ donate.css +++++ */
 
 .page-donate .donate-box {
     display: flex;
