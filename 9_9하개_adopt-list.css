@@ -1,21 +1,16 @@
-/* adopt-list.css */
 
+/* 1. 지역 선택 메뉴 */
 .region-menu .sub-menu {
-    display: flex;
     flex-direction: row;
     gap: 12px;
     margin-top: 16px;
-  /* justify-content: center; */
 }
 
-.menu-item a:hover {
-    background: var(--mint-pale);
-    border-color: var(--mint);
+.region-menu .menu-item a:hover {
     transform: translateY(10px);
-    /* text-decoration: none; */
 }
 
-/* 2. 지역별 강아지 카드 목록 (한 줄 4개 배치) */
+/* 2. 강아지 카드 목록 */
 .dog-list {
     display: flex;
     flex-wrap: wrap;
@@ -24,12 +19,11 @@
 }
 
 .dog-card {
-  /* 한 줄에 4개 배치: 간격 3개(16px * 3 = 48px)를 뺀 후 4로 나눔 */
-    flex: 0 0 calc((100% - 48px) / 4);
+    flex: 0 0 calc((100% - 3 * 16px) / 4);
+    overflow: hidden;
     background: var(--white);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow);
-    overflow: hidden;
     transition: transform .25s, box-shadow .25s;
 }
 
@@ -39,10 +33,10 @@
 }
 
 .dog-card img {
+    display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover; 
-    display: block;
+    object-fit: cover;
 }
 
 .dog-info {
@@ -50,28 +44,30 @@
 }
 
 .dog-info h3 {
-    font-size: 1.1rem;
     margin-bottom: 6px;
+    font-size: 1.1rem;
 }
 
 .dog-info p {
     margin: 0;
-    font-size: 0.88rem;
     color: var(--text-sub);
+    font-size: .88rem;
     line-height: 1.5;
 }
 
+/* 3. 지역 이동 링크 */
 .back-to-region {
-    text-align: right;
     margin-top: 12px;
-    font-size: 0.88rem;
+    font-size: .88rem;
+    text-align: right;
 }
 
+/* 4. 입양 안내 */
 .notice {
+    margin-top: 36px;
     padding: 24px 28px;
     background: var(--beige);
     border-radius: var(--radius-md);
-    margin-top: 36px;
 }
 
 .notice h2 {

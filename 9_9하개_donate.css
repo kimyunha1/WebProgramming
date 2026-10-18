@@ -7,7 +7,6 @@
     text-align: center;
     padding: 32px 24px;
     background: var(--beige);
-    /* background-image: url(orangepaw.avif); */
     border-radius: var(--radius-md);
     margin-bottom: 32px;
 }
@@ -39,6 +38,7 @@
 h2, p{
 text-align: center;
 }
+
 form p,
 fieldset p {
     text-align: left;
@@ -58,4 +58,17 @@ button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+}
+
+
+/* 후원자 정보 입력란 너비 */
+fieldset table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+fieldset table input,
+fieldset table select {
+    width: 100%;
+    box-sizing: border-box;
 }

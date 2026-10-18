@@ -50,7 +50,7 @@ main {
     padding: 0 24px 48px;
 }
 /*글씨*/
-h1, h2, h3 { /*공통설정 Gowun Dodum*/ 
+h1,h2, h3 { /*공통설정 Gowun Dodum*/ 
     font-family: "Noto Sans KR", sans-serif;
     /* line-height: 1.4; */
     margin: 0 0 12px;
@@ -65,6 +65,7 @@ h1, h2, h3 { /*공통설정 Gowun Dodum*/
         padding-bottom: 20px;
         line-height: 1.4;
         margin-bottom: 24px;
+        margin: 0 0 12px;
     }
 
     h2::after {
@@ -95,10 +96,6 @@ a {
     text-decoration: none;
     transition: color .25s;
 }
-                /* a:hover { a태그 위에 마우스 올리면 밑줄 기본
-                    color: var(--mint);
-                    text-decoration: underline;
-                } */
 
 img {
     max-width: 100%;
@@ -287,7 +284,7 @@ main {
     flex: 0 0 220px;
 }
 .spacer img {
-    padding: 0 80px;
+    padding: 0 80px 0 0;
     display: block;
     width: 300px;
     height: auto;
@@ -378,22 +375,7 @@ legend {
     color: var(--mint-dark);
 }
 
-.form-group {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 8px 0;
-    font-weight: 500;
-}
-
-.form-group > input,
-.form-group > select,
-.form-group > textarea {
-    flex: 1;
-    min-width: 0;
-}
-
-input[type="text"], input[type="tel"], input[type="number"], input[type="date"], select, textarea {
+input[type="text"], input[type="tel"], input[type="number"], input[type="date"], select, textarea, input[type="email"], input[type="month"] {
     padding: 8px 10px;
     font: inherit;
     color: var(--text-dark);
@@ -447,4 +429,5 @@ tbody tr:nth-child(even) td { background: var(--beige); }
     color: var(--text-dark);
     font-size: 1rem;
 }
+
 

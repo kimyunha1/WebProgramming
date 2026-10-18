@@ -1,99 +1,145 @@
-/* adopt-apply.css */
 
-/* 1. 입양 절차 리스트 */
+/* adopt-apply3.css */
+
+
+/* 1. 입양 절차 */
 .process ol {
     margin: 12px 0 24px;
     padding-left: 20px;
 }
+
 .process li {
     margin-bottom: 6px;
     font-weight: 500;
 }
 
-/* 2. 라디오 질문 그룹 (Step 3, 4) */
-.radio-group {
-    font: "Gowun Dodum", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-    padding: 12px 0;
-    margin: 0;
-    border: none;                           
-    border-bottom: 1px solid var(--beige-dark);
-    border-radius: 0;    
-}
-.radio-group:last-of-type {
-    border-bottom: none;
+/* Step 1, 2 입력창 정렬 */
+.step1 .form-group > label
+.step2 .form-group > label {
+    flex: 0 0 100px;
 }
 
-/* 질문 제목 */
-.radio-group > legend,
-.radio-group > .radio-label {
-    margin: 0 0 4px;
-    padding: 0;
-    font-size: 1rem;
+/* 입력창 너비 통일 */
+.form-group > input,
+.form-group > select{
+    flex: 1;
+    min-width: 0;
+}
+
+/* 2. 입력 영역 공통 */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 8px 0;
     font-weight: 500;
-    color: var(--text-dark);
 }
 
-/* 라디오 선택지 묶음 (가로 나열) */
-.radio-options {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  justify-content: flex-start; /* ★ 선택지 왼쪽 정렬 */
-    gap: 8px 16px;
-    width: 100%;
+/* 입력 요소가 남은 공간을 채우도록 설정 */
+.input-area input,
+.input-area select,
+.input-area textarea {
+    flex: 1;
+    min-width: 0;
 }
 
-.radio-options label {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-}
-
-/* 3. 라벨 너비 및 서술형(textarea) 질문 세로 배치 */
-.form-group > label {
-  flex: 0 0 120px; /* 일반 가로 질문 라벨 너비 고정 */
-}
-
+/* 서술형 질문은 세로 배치 */
 .form-group.is-column {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
 }
 
-.form-group.is-column > label {
-    flex: none;
-    font-size: 1.05rem;
-    color: var(--mint-dark);
+
+/* 3. 라디오 질문 그룹 */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid var(--beige-dark);
+    border-radius: 0;
 }
 
-/* 4. 동의 체크리스트 */
+/* 라디오 질문 제목 */
+.radio-group legend {
+    margin: 0 0 4px;
+    padding: 0;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* 라디오 선택지 배치 */
+.radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    width: 100%;
+}
+
+/* 라디오 선택지의 텍스트와 버튼 */
+.radio-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+
+/* 4. 입양 동기와 계획 (Step 5) */
+.step5 label {
+    color: var(--mint-dark);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+
+/* 5. 동의 체크리스트 (Step 6) */
 .checklist {
     display: flex;
     align-items: flex-start;
     gap: 8px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
+/* 체크박스 크기와 위치 유지 */
 .checklist input[type="checkbox"] {
-    margin-top: 4px;
     flex: none;
-}
-
-/* 5. 안내 및 경고 문구 */
-.hint {
-    font-size: 0.85rem;
-    color: var(--text-sub);
-}
-
-.warning {
     margin-top: 4px;
-    font-size: 0.88rem;
+}
+
+/* 체크리스트 문구 */
+.checklist span {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+
+/* 6. 안내 및 경고 문구 */
+.warning,
+.hint {
+    margin-top: 4px;
     color: var(--danger-dark);
+    font-size: 0.88rem;
     font-weight: 500;
 }
+
+strong {
+    color: var(--danger-dark);
+}
+
+/* 7. 하단 버튼 */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+

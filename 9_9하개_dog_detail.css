@@ -1,101 +1,105 @@
-/* dog-detail.css */
-
+/* 상단 소개 영역 */
 .intro {
-  background-color: var(--beige);
+    background: var(--beige);
 }
 
+/* 강아지 사진 및 상세 정보 배치 */
 .dog-detail-layout {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
 }
 
 .dog-photos {
-  flex: 0 0 380px;
+    flex: 0 0 380px;
 }
 
 .dog-photos img {
-  width: 100%;
-  aspect-ratio: 3 / 4; 
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow);
-  margin-top: 130px; 
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    margin-top: 130px;
+    box-shadow: var(--shadow);
 }
 
 .dog-detail-content {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
 
 .dog-detail-content h2 {
+    margin: 0;
     padding: 0;
-  margin: 0
 }
 
 .dog-detail-content h2::after {
-  display: none;
+    display: none;
+}
+.dog-detail-content h2::after {
+    display: none;
 }
 
-/* 2. 상태 알림 뱃지 (보호 중) */
+/* 보호 상태 및 요약 */
 .protection-status {
-  display: inline-block;
-  margin-bottom: 8px;
-  padding: 4px 14px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--mint-dark);
-  background: var(--mint-pale);
-  border-radius: var(--radius-pill);
-}
-.dog-summary {
-  color: var(--text-sub);
-  margin-bottom: 16px;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 14px;
+    color: var(--mint-dark);
+    background: var(--mint-pale);
+    border-radius: var(--radius-pill);
+    font-size: .85rem;
+    font-weight: 700;
 }
 
-/* 3. 상세 정보 표 (<dl> / <dt> / <dd>) */
+.dog-summary {
+    margin-bottom: 16px;
+    color: var(--text-sub);
+}
+
+/* 상세 정보 목록 */
 .dog-info-table {
-  margin: 20px 0;
-  border-top: 2px solid var(--mint);
+    margin: 20px 0;
+    border-top: 2px solid var(--mint);
 }
 
 .info-row {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--beige-dark);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--beige-dark);
 }
 
 .info-row dt {
-  flex: 0 0 120px;
-  padding: 10px 16px;
-  font-weight: 700;
-  background: var(--beige);
+    flex: 0 0 120px;
+    padding: 10px 16px;
+    background: var(--beige);
+    font-weight: 700;
 }
 
 .info-row dd {
-  flex: 1;
-  margin: 0;
-  padding: 10px 16px;
+    flex: 1;
+    margin: 0;
+    padding: 10px 16px;
 }
 
 .notice-text {
-  font-size: 0.85rem;
-  color: var(--text-sub);
-  margin-top: 12px;
+    margin-top: 12px;
+    color: var(--text-sub);
+    font-size: .85rem;
 }
 
-/* 4. 입양 신청 버튼 및 돌아가기 링크 */
+/* 하단 버튼 및 목록 이동 */
 .apply-link {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 .back-to-list {
-  margin-top: 36px;
-  text-align: center;
-  font-size: 0.92rem;
+    margin-top: 36px;
+    text-align: center;
+    font-size: .92rem;
 }
+
 .button {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }

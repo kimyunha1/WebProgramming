@@ -1,3 +1,5 @@
+/* main.css */
+
 .intro{
     padding: 20px 0 0;
     background-color: var(--white);
@@ -21,72 +23,142 @@
     box-shadow: var(--shadow-hover);
 }
 
-
-/* 메인 이미지 영역 */
 .main-content {
+    background: var(--white);
+    flex: 1;
+    /* min-width: 0px; */
+    /* padding : 28px; */
+}
+
+/* 공지사항 */
+.notice-line {
+    display: inline;
+    line-height: 2;
+}
+.notice-list a {
+    color: var(--mint-dark);
+    font-weight: bold;
+    text-decoration: none;
+}
+.notice-list a:hover {
+    color: hotpink;
+    text-decoration: underline;
+}
+.notice-list {
+    padding-left: 0;
+    list-style: none;
+}
+.notice-list li::before {
+    content: "♥";
+    color: hotpink;
+    margin-right: 10px;
+}
+
+/* 보호중인 동물 보기 */
+.dog-list {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding: 28px;
-}
-
-.main-image-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
     gap: 16px;
+    margin: 20px 0;
 }
 
-.main-image-section a {
+.dog-card {
+  /* 한 줄에 4개 배치: 간격 3개(16px * 3 = 48px)를 뺀 후 4로 나눔 */
+    flex: 0 0 calc((100% - 48px) / 4);
+    background: var(--mint-pale);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.dog-card:hover, .best-review:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.dog-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover; 
     display: block;
+    border-radius: var(--radius-md);
+}
+
+.dog-info {
+    text-align: center
+}
+/* 베스트 입양 후기 */
+.best-review {
+    background: var(--beige);
+    border-radius: var(--radius-sm);
+    width: 100%;
+    padding: 20px;
+    margin-top: 15px;
+    font-family:'Times New Roman', Times, serif
+
+}
+
+.best-card a {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.best-review img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.best-overlay {
+    flex: 1;
+    min-width: 0;
+}
+
+
+
+
+/* 입양후기 */
+.review-list {
+    display: flex;
+    gap: 16px;
+    padding-top: 20px;
+
+}
+
+.review-card {
+  /* 한 줄에 4개 배치: 간격 3개(16px * 3 = 48px)를 뺀 후 4로 나눔 */
+    flex: 0 0 calc((100% - 48px) / 4);
+    position: relative;
     overflow: hidden;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow);
-    background: var(--white);
+    /* transition: transform .3s, box-shadow .3s; */
+    padding:10px;
+    font-family:'Times New Roman', Times, serif
 }
 
-.main-image-section img {
-    display: block;
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.review-card img {
     width: 100%;
-    height: 190px;
-    object-fit: cover;
-    transition: transform .3s ease, filter .3s ease;
+    aspect-ratio: 1 / 1;  /* 모든 사진의 가로:세로 비율을 1:1 으로 고정 */
+    object-fit: cover;    /* 원본 비율이 달라도 찌그러지지 않고 틀에 예쁘게 꽉 채움 */
+    display: block;
+    margin-bottom: 18px;
 }
 
-.main-image-section a:hover img {
-    transform: scale(1.06);
-    filter: brightness(.9);
+.review-text {
+    color:var(--text-dark)
 }
 
-/* 입양 후기 3장 */
-.review-images {
-    grid-template-columns: repeat(3, 1fr);
-}
 
-.review-images img {
-    height: 240px;
-}
-
-/* 모바일 */
-@media (max-width: 700px) {
-    .main-content {
-        padding: 16px;
-    }
-
-    .main-image-section,
-    .review-images {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .main-image-section img,
-    .review-images img {
-        height: 170px;
-    }
-}
-
-@media (max-width: 450px) {
-    .main-image-section,
-    .review-images {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* 베스트 입양후기 */

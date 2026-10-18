@@ -1,16 +1,13 @@
-/* adopt-review.css */
-
-/* 후기 목록: 한 줄에 4개씩 배치 */
+/* 입양 후기 카드 목록 */
 .review-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; /* 카드 사이의 간격 */
+    gap: 16px;
 }
 
 .review-card {
-  /* 한 줄에 4개 배치: 간격 3개(16px * 3 = 48px)를 뺀 후 4로 나눔 */
-    flex: 0 0 calc((100% - 48px) / 4);
     position: relative;
+    flex: 0 0 calc((100% - 48px) / 4);
     overflow: hidden;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow);
@@ -23,12 +20,13 @@
 }
 
 .review-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;  /* 모든 사진의 가로:세로 비율을 1:1 으로 고정 */
-    object-fit: cover;    /* 원본 비율이 달라도 찌그러지지 않고 틀에 예쁘게 꽉 채움 */
     display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
-/* 2. 마우스 올렸을 때 사진 위에 뜨는 설명 오버레이 */
+
+/* 사진 위에 나타나는 후기 설명 */
 .review-overlay {
     position: absolute;
     inset: 0;
@@ -38,7 +36,7 @@
     gap: 6px;
     padding: 12px;
     color: var(--white);
-    background: rgba(46, 59, 54, 0.88);
+    background: rgba(46, 59, 54, .88);
     opacity: 0;
     transition: opacity .3s;
 }
@@ -48,26 +46,26 @@
 }
 
 .review-overlay h3 {
-    color: var(--mint-light);
-    font-size: 0.95rem;
     margin: 0;
+    color: var(--mint-light);
+    font-size: .95rem;
 }
 
 .review-date,
 .review-author {
-    font-size: 0.75rem;
-    color: var(--beige-dark);
     margin: 0;
+    color: var(--beige-dark);
+    font-size: .75rem;
 }
 
 .review-text {
-    font-size: 0.8rem;
-    line-height: 1.4;
     margin: 0;
-    -webkit-box-orient: vertical;
     overflow: hidden;
+    font-size: .8rem;
+    line-height: 1.4;
 }
 
+/* 페이지 번호 */
 .pagination {
     display: flex;
     justify-content: center;
@@ -88,34 +86,43 @@
 }
 
 .pagination a.active {
+    color: var(--white);
     background: var(--mint);
     border-color: var(--mint);
-    color: var(--white);
     font-weight: 700;
 }
 
-/* 4. 하단 입양 신청 유도 링크 상자 */
-.apply-link {
-    text-align: center;
-    padding: 16px;
-    margin-top: 28px;
-    background: var(--beige);
-    border-radius: var(--radius-md);
+/* 후기 작성 폼 */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 8px 0;
     font-weight: 500;
 }
 
-/* 질문: 너비 고정 + 오른쪽 정렬 */
-.form-group > label:first-child {
-    flex: 0 0 120px;
+.form-group label {
+    flex: 0 0 110px;
     text-align: right;
 }
 
-/* 후기 내용(textarea)도 질문 옆에, 질문은 입력칸 윗줄에 맞춤 */
-.form-group:has(textarea) { align-items: flex-start; }
-.form-group:has(textarea) > label:first-child { padding-top: 8px; }
+.input-area input,
+.input-area textarea {
+    flex: 1;
+    min-width: 0;
+}
 
-/* 입력칸 가로 길이 줄이기 (모든 칸 같은 길이) */
-.form-group > input,
-.form-group > textarea {
-    max-width: 800px;
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 입양 신청 안내 */
+.apply-link {
+    margin-top: 28px;
+    padding: 16px;
+    background: var(--beige);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    text-align: center;
 }

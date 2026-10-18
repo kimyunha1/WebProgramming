@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="김사랑, 김윤하, 조민체, 최석인">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="9하개 유기견 입양 신청서 작성 및 입양 절차, 방문 상담 안내입니다.">
+    <meta name="keywords" content="9하개, 유기견 입양, 유기동물 보호센터, 강아지 입양 신청, 유기견 후원, 유기동물 보호 단체">
     <title>9하개 | 입양 신청</title>
-
     <link rel="stylesheet" href="9_9하개_common2.css">
     <link rel="stylesheet" href="9_9하개_adopt-apply.css">
 </head>
@@ -79,7 +78,7 @@
 
 
                 <form method="get" action="#">
-                    <fieldset id="step1">
+                    <fieldset id="step1" class="step1">
                         <legend>1. 입양 희망 강아지</legend>
                         <div class="input-area">
                             <div class="form-group">
@@ -102,7 +101,7 @@
                     </fieldset>
 
                     <!-- 2. 신청자 기본 정보 -->
-                    <fieldset id="step2">
+                    <fieldset id="step2" class="step2">
                         <legend>2. 신청자 기본 정보</legend>
                         <div class="input-area">
                             <div class="form-group">
@@ -171,7 +170,7 @@
                     </fieldset>
 
                     <!-- 3. 가족 및 주거 환경 -->
-                    <fieldset id="step3">
+                    <fieldset id="step3" class="step3">
                         <legend>3. 가족 및 주거 환경</legend>
                         <div class="input-area">
                             <!-- 주거 형태 -->
@@ -285,7 +284,7 @@
                                         해당 없음(자가)
                                     </label>
                                 </div>
-
+                                
                                 <p class="warning">
                                     집주인의 동의 없이는 입양이 어려울 수 있어요.
                                     상담 전에 꼭 확인해주세요.
@@ -294,9 +293,10 @@
 
                             <!-- 가족 수 -->
                             <div class="form-group">
+                                <div class="radio-group">
                                 <label for="family">
                                     함께 사는 가족 수(본인 포함)
-                                </label>
+                                </label></div>
                                 <div class="unit-input">
                                     <input
                                         type="number"
@@ -342,9 +342,10 @@
 
                             <!-- 혼자 있는 시간 -->
                             <div class="form-group">
+                                <div class="radio-group">
                                 <label for="alone-time">
                                     낮 동안 반려견이 혼자 있는 시간
-                                </label>
+                                </label></div>
                                 <select
                                     id="alone-time"
                                     name="alone-time"
@@ -367,7 +368,7 @@
 
 
                     <!-- 4. 반려 경험 -->
-                    <fieldset id="step4">
+                    <fieldset id="step4" class="step4">
                         <legend>4. 반려 경험</legend>
 
                         <div class="input-area">
@@ -394,8 +395,9 @@
                                     </label>
                                 </div>
                             </fieldset>
-
+                            
                             <fieldset class="radio-group">
+                                <div class="radio-group">
                                 <legend>지금 키우고 있는 동물이 있나요?</legend>
                                 <div class="radio-options">
                                     <label>
@@ -414,12 +416,13 @@
                                             value="pet-no"
                                         >
                                         아니오
-                                    </label>
+                                    </label></div>
                                 </div>
                                 <div class="form-group sub-question">
+                                    <div class="radio-group">
                                     <label for="pet-detail">
                                         예인 경우, 어떤 동물인가요?
-                                    </label>
+                                    </label></div>
                                     <input
                                         type="text"
                                         id="pet-detail"
@@ -433,7 +436,7 @@
 
 
                     <!-- 5. 입양 동기와 계획 -->
-                    <fieldset id="step5">
+                    <fieldset id="step5" class="step5">
                         <legend>5. 입양 동기와 계획</legend>
 
                         <div class="input-area">
@@ -456,7 +459,7 @@
                     </fieldset>
 
                     <!-- 6. 동의 체크리스트 -->
-                    <fieldset id="step6">
+                    <fieldset id="step6" class="step6">
                         <legend>6. 동의 체크리스트</legend>
                         <div class="input-area">
                             <label class="checklist">
