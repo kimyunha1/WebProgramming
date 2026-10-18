@@ -11,7 +11,7 @@
     font-weight: 500;
 }
 
-.page-adopt-apply .step1 .form-group > label
+.page-adopt-apply .step1 .form-group > label,
 .page-adopt-apply .step2 .form-group > label {
     flex: 0 0 100px;
 }
