@@ -22,7 +22,6 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     box-shadow: var(--shadow);
-    transition: transform .3s, box-shadow .3s;
 }
 .page-introduce .photo-row img:hover {
     transform: translateY(-3px);
