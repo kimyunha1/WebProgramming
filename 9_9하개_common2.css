@@ -1,8 +1,8 @@
+/* common2.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Gowun+Dodum&display=swap');
 
-/* =========================================================
-1. 디자인 시스템 변수
-   ========================================================= */
+      /* +++++ */
 :root {
 --mint-dark: #3e9e82;
 --mint: #4CAF93;
@@ -25,11 +25,8 @@
 --gap: 24px;
 }
 
-/* =========================================================
-2. 리셋 & 기본 타이포그래피
-   ========================================================= */
+      /* +++++ */
 * { box-sizing: border-box; }
-/* html { scroll-behavior: smooth; } */
 
 body { 
     margin: 0;
@@ -49,17 +46,18 @@ main {
     margin: 0 auto;
     padding: 0 24px 48px;
 }
+
 /*글씨*/
-h1,h2, h3 { /*공통설정 Gowun Dodum*/ 
+h1,h2, h3 {
     font-family: "Noto Sans KR", sans-serif;
     /* line-height: 1.4; */
     margin: 0 0 12px;
 }
 
-    h1 { font-size: 2rem; /*가장 큰 제목*/
+    h1 { font-size: 2rem; 
     line-height: 1.4;} 
 
-    h2 { /*중간 제목*/
+    h2 { 
         font-size: 1.5rem;
         position: relative;
         padding-bottom: 20px;
@@ -81,7 +79,7 @@ h1,h2, h3 { /*공통설정 Gowun Dodum*/
     }
 
     h3 {
-        /* line-height: 2.0; */
+        
         font-size: 1.15rem;
         color: var(--mint-dark);
     }
@@ -102,12 +100,12 @@ img {
     border-radius: var(--radius-md);
 }
 
-hr { /* 콘텐츠와 콘텐츠 사이를 구분하는 베이지 가로선 */
+hr { 
     border: none;
     border-top: 1px solid var(--beige-dark);
     margin: 40px 0;
 }
-/*글꼴 mark,em,strong*/
+
 mark {
     background: none;
     color: var(--mint-dark);
@@ -131,9 +129,7 @@ figcaption {
     color: var(--text-sub);
 }
 
-/* =========================================================
-    3. 헤더 & 대메뉴
-   ========================================================= */
+/* +++++ */
 .top-bar {
     max-width: 100%;
     margin: 0;
@@ -170,11 +166,11 @@ figcaption {
     font-size: .88rem;
     color: var(--text-sub);
 }
-.top-bar-right a { color: var(--text-sub); } /*top-bar-right 영역 안에 있는 모든 <a> 태그*/
+.top-bar-right a { color: var(--text-sub); }
 .top-bar-right a:hover { color: var(--mint-dark); }
 .phone { font-weight: 700; color: var(--text-dark); }
 
-.btn-chip { /*링크를 일반 텍스트가 아니라 알양모양의 버튼 처럼 보이게 만드는 css*/
+.btn-chip {
     background: var(--mint-pale);
     color: var(--mint-dark) !important;
     font-weight: 700;
@@ -190,35 +186,31 @@ figcaption {
 .site-nav {
     position: sticky;
     top: 0;
-    z-index: 100; /*다른 요소와 겹칠 때 앞쪽에 표시되도록 높은 쌓임 순서 지정*/
+    z-index: 100;
     /* background: var(--white); */
     border-top: 1px solid var(--beige-dark);
     border-bottom: 1px solid var(--beige-dark);
 }
-.site-nav ul { /* 메뉴 항목들을 가로로 정렬 */
-    display: flex; /*메뉴 항목을 가로 방향으로 배치*/
+.site-nav ul { 
+    display: flex; 
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 24px;
     gap: 15px;
-    list-style: none; /*목록 앞에 붙는 기본 글머리 기호 제거*/
-    justify-content: center; /*메뉴 항목들을 가로 방향 가운데 정렬*/
+    list-style: none;
+    justify-content: center; 
 }
-                .site-nav a { /*이해*/
+                .site-nav a {
                     display: block; 
-                    /*링크가 블록 요소처럼 공간을 차지하도록 설정*/
+                    
                     padding: 16px 18px;
                     font-weight: 500;
                     color: var(--text-dark);
-                    /* border-bottom: 3px solid transparent;  */
-                    /*아래쪽에 투명한 3px 테두리를 미리 확보. 이게 왜 필요??*/
-                    /* transition: color .25s, border-color .25s; */
-                    /*이게 왜 필요??*/
                 }
+
 .site-nav a:hover {
     color: var(--mint-dark);
     border-bottom-color: var(--mint-light);
-    /* text-decoration: none; */
 }
 .site-nav a.active {
     color: var(--mint-dark);
@@ -226,9 +218,7 @@ figcaption {
     font-weight: 700;
 }
 
-/* =========================================================
-    4. 공통 레이아웃 (3단 배치: 사이드바 | 메인 | 스페이서)
-   ========================================================= */
+/* +++++ */
 main {
     width: 100%;
     max-width: 100%;       
@@ -277,7 +267,6 @@ main {
 .main-content {
     background: var(--white);
     flex: 1;
-    /* min-width: 0px; */
     padding : 28px;
 }
 .spacer {
@@ -325,12 +314,10 @@ main {
     scroll-margin-top: 90px;
 }
 
-/* =========================================================
-    5. 공통 컴포넌트 (버튼, 폼, 테이블, 푸터)
-   ========================================================= */
+/* +++++ */
 .btn, button, input[type="submit"] {
     padding: 12px 28px;
-    cursor: pointer; /*커서 손가락모양으로 변경*/
+    cursor: pointer; 
     font: 700 .95rem "Noto Sans KR", sans-serif;
     color: var(--white);
     background: var(--mint-dark);
