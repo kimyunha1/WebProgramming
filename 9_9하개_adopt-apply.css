@@ -1,33 +1,33 @@
 
-/* adopt-apply3.css */
+/* adopt-apply3.page-adopt-apply .css */
 
 
 /* 1. 입양 절차 */
-.process ol {
+.page-adopt-apply .process ol {
     margin: 12px 0 24px;
     padding-left: 20px;
 }
 
-.process li {
+.page-adopt-apply .process li {
     margin-bottom: 6px;
     font-weight: 500;
 }
 
 /* Step 1, 2 입력창 정렬 */
-.step1 .form-group > label
-.step2 .form-group > label {
+.page-adopt-apply .step1 .form-group > label
+.page-adopt-apply .step2 .form-group > label {
     flex: 0 0 100px;
 }
 
 /* 입력창 너비 통일 */
-.form-group > input,
-.form-group > select{
+.page-adopt-apply .form-group > input,
+.page-adopt-apply .form-group > select{
     flex: 1;
     min-width: 0;
 }
 
-/* 2. 입력 영역 공통 */
-.form-group {
+/* 2.page-adopt-apply . 입력 영역 공통 */
+.page-adopt-apply .form-group {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -36,23 +36,23 @@
 }
 
 /* 입력 요소가 남은 공간을 채우도록 설정 */
-.input-area input,
-.input-area select,
-.input-area textarea {
+.page-adopt-apply .input-area input,
+.page-adopt-apply .input-area select,
+.page-adopt-apply .input-area textarea {
     flex: 1;
     min-width: 0;
 }
 
 /* 서술형 질문은 세로 배치 */
-.form-group.is-column {
+.page-adopt-apply .form-group.is-column {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
 }
 
 
-/* 3. 라디오 질문 그룹 */
-.radio-group {
+/* 3.page-adopt-apply . 라디오 질문 그룹 */
+.page-adopt-apply .radio-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -65,7 +65,7 @@
 }
 
 /* 라디오 질문 제목 */
-.radio-group legend {
+.page-adopt-apply .radio-group legend {
     margin: 0 0 4px;
     padding: 0;
     color: var(--text-dark);
@@ -74,7 +74,7 @@
 }
 
 /* 라디오 선택지 배치 */
-.radio-options {
+.page-adopt-apply .radio-options {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -83,26 +83,26 @@
 }
 
 /* 라디오 선택지의 텍스트와 버튼 */
-.radio-options label {
+.page-adopt-apply .radio-options label {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     color: var(--text-dark);
-    font-size: 0.95rem;
+    font-size: 0.page-adopt-apply .95rem;
     cursor: pointer;
 }
 
 
 /* 4. 입양 동기와 계획 (Step 5) */
-.step5 label {
+.page-adopt-apply .step5 label {
     color: var(--mint-dark);
-    font-size: 1.05rem;
+    font-size: 1.page-adopt-apply .05rem;
     font-weight: 500;
 }
 
 
 /* 5. 동의 체크리스트 (Step 6) */
-.checklist {
+.page-adopt-apply .checklist {
     display: flex;
     align-items: flex-start;
     gap: 8px;
@@ -111,33 +111,33 @@
 }
 
 /* 체크박스 크기와 위치 유지 */
-.checklist input[type="checkbox"] {
+.page-adopt-apply .checklist input[type="checkbox"] {
     flex: none;
     margin-top: 4px;
 }
 
 /* 체크리스트 문구 */
-.checklist span {
+.page-adopt-apply .checklist span {
     color: var(--text-dark);
-    font-size: 0.95rem;
+    font-size: 0.page-adopt-apply .95rem;
 }
 
 
 /* 6. 안내 및 경고 문구 */
-.warning,
-.hint {
+.page-adopt-apply .warning,
+.page-adopt-apply .hint {
     margin-top: 4px;
     color: var(--danger-dark);
-    font-size: 0.88rem;
+    font-size: 0.page-adopt-apply .88rem;
     font-weight: 500;
 }
 
-strong {
+.page-adopt-apply strong {
     color: var(--danger-dark);
 }
 
 /* 7. 하단 버튼 */
-.form-buttons {
+.page-adopt-apply .form-buttons {
     display: flex;
     justify-content: center;
     gap: 8px;
