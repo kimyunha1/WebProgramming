@@ -281,16 +281,15 @@
                                 </p>
                             </fieldset>
 
-                            <div class="radio-group">
-                                <div class="form-group">
-                                    <label for="family">함께 사는 가족 수(본인 포함)</label>                           
-                                    <div class="unit-input">
-                                        <input type="number" id="family" name="family"
-                                            min="1"
-                                            max="100"
-                                            required>
-                                        <span>명</span>
-                                    </div>
+                            <div class="form-group">
+                                <div class="radio-group">
+                                <label for="family">함께 사는 가족 수(본인 포함)</label></div>                          
+                                <div class="unit-input">
+                                    <input type="number" id="family" name="family"
+                                        min="1"
+                                        max="100"
+                                        required>
+                                    <span>명</span>
                                 </div>
                             </div>
 
@@ -322,9 +321,10 @@
                             </fieldset>
 
                             <div class="form-group">
+                                <div clas="=radio-group">
                                 <label for="alone-time">
                                     낮 동안 반려견이 혼자 있는 시간
-                                </label>
+                                </label></div>
                                 <select
                                     id="alone-time"
                                     name="alone-time"
@@ -374,6 +374,7 @@
                             </fieldset>
                             
                             <fieldset class="radio-group">
+                                <div class="radio-group">
                                 <legend>지금 키우고 있는 동물이 있나요?</legend>
                                 <div class="radio-options">
                                     <label>
@@ -392,13 +393,13 @@
                                             value="pet-no"
                                         >
                                         아니오
-                                    </label>
+                                    </label></div>
                                 </div>
-                            </fieldset>
                                 <div class="form-group sub-question">
+                                    <div class="radio-group">
                                     <label for="pet-detail">
                                         예인 경우, 어떤 동물인가요?
-                                    </label>
+                                    </label></div>
                                     <input
                                         type="text"
                                         id="pet-detail"
@@ -406,8 +407,7 @@
                                         placeholder="예: 강아지 1마리, 5살"
                                     >
                                 </div>
-                            
-                        </div>
+                            </fieldset>
                     </fieldset>
 
                     <fieldset id="step5" class="step5">
