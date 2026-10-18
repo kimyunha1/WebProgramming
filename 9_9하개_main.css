@@ -30,7 +30,6 @@
     /* padding : 28px; */
 }
 
-/* 공지사항 */
 .page-main .notice-line {
     display: inline;
     line-height: 2;
@@ -54,7 +53,6 @@
     margin-right: 10px;
 }
 
-/* 보호중인 동물 보기 */
 .page-main .dog-list {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +85,6 @@
 .page-main .dog-info {
     text-align: center
 }
-/* 베스트 입양 후기 */
 .page-main .best-review {
     background: var(--beige);
     border-radius: var(--radius-sm);
@@ -120,10 +117,6 @@
     min-width: 0;
 }
 
-
-
-
-/* 입양후기 */
 .page-main .review-list {
     display: flex;
     gap: 16px;
