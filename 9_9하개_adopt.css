@@ -25,7 +25,6 @@
     background: var(--white);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow);
-    transition: transform .25s, box-shadow .25s;
 }
 
 .page-adopt-list .dog-card:hover {
